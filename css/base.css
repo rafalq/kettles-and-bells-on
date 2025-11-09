@@ -10,4 +10,5 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: var(--color-text);
+    padding: 30px;
 }
