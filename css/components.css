@@ -3,11 +3,12 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  letter-spacing: 1px;
-  font-weight: var(--font-weight-semibold);
-  padding: 15px 40px;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: relative;
 
   transition: all 0.2s;
@@ -23,7 +24,7 @@
   box-shadow: var(--shadow-md-light);
 }
 
-.btn-white {
+.btn--white {
   background-color: white;
   color: var(--color-accent-dark);
 }
@@ -34,7 +35,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  border-radius: 100px;
+  border-radius: 10rem;
   top: 0;
   left: 0;
   z-index: -1;
@@ -42,11 +43,11 @@
   transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: white;
 }
 
-.btn-white:hover::after {
+.btn--white:hover::after {
   transform: scaleX(1.15) scaleY(1.4);
   opacity: 0;
 }
