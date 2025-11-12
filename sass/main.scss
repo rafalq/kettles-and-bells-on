@@ -1,16 +1,35 @@
+$color-primary: #4a708b;
+$color-primary-light: #6e9ab3;
+$color-primary-dark: #2f4f4f;
+
+$color-bg-header-1: rgba(10, 13, 16, 0.85);
+$color-bg-header-2: rgba(19, 24, 28, 0.85);
+
+$color-accent: #c1a661;
+$color-accent-light: #d6ba80;
+$color-accent-dark: #8f7642;
+
+$color-bg: #0b0c0e;
+$color-surface: #16191c;
+$color-border: #2a2e32;
+
+$color-text: #e0e0e0;
+$color-text-secondary: #8c9297;
+
+$color-success: #3c9a5f;
+$color-warning: #b5913e;
+$color-error: #c94c4c;
+$color-info: #3a7ca5;
+
 .main-header {
   height: 95vh;
   background-image:
-    linear-gradient(
-      to right bottom,
-      var(--color-bg-header-1),
-      var(--color-bg-header-2)
-    ),
+    linear-gradient(to right bottom, $color-bg-header-1, $color-bg-header-2),
     url(../assets/images/hero.jpg);
   background-size: cover;
   background-position: bottom;
   position: relative;
-  color: var(--color-primary);
+  color: $color-primary;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
