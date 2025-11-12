@@ -1,0 +1,37 @@
+/* -----
+  COLORS
+ ----- */
+
+$color-primary: #4a708b;
+$color-primary-light: #6e9ab3;
+$color-primary-dark: #2f4f4f;
+
+$color-accent: #c1a661;
+$color-accent-light: #d6ba80;
+$color-accent-dark: #8f7642;
+
+$color-bg: #0b0c0e;
+$color-surface: #16191c;
+$color-border: #2a2e32;
+
+$color-text: #e0e0e0;
+$color-text-secondary: #8c9297;
+
+$color-white: #fff;
+$color-black: #000;
+$color-success: #3c9a5f;
+$color-warning: #b5913e;
+$color-error: #c94c4c;
+$color-info: #3a7ca5;
+
+/* -----
+  SHADOWS
+ ----- */
+
+$shadow-sm: 0 0.1rem 0.2rem 0 rgba($color-black, 0.25);
+$shadow-md: 0 0.5rem 1rem -0.2rem rgba($color-black, 0.25);
+$shadow-lg: 0 1rem 2rem -0.4rem rgba($color-black, 0.25);
+
+$shadow-sm-light: 0 0.1rem 0.2rem 0 rgba($color-white, 0.25);
+$shadow-md-light: 0 0.5rem 1rem -0.1rem rgba($color-white, 0.25);
+$shadow-lg-light: 0 1rem 2rem -0.2rem rgba($color-white, 0.25);

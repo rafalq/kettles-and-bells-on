@@ -3,8 +3,8 @@
   background-image:
     linear-gradient(
       to right bottom,
-      var(--color-bg-header-1),
-      var(--color-bg-header-2)
+      rgba(10, 13, 16, 0.85),
+      rgba(19, 24, 28, 0.85)
     ),
     url(../assets/images/hero.jpg);
   background-size: cover;
@@ -33,7 +33,7 @@
 }
 
 .hero-title {
-  color: white;
+  color: var(--color-white);
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
