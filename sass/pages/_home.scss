@@ -1,1 +1,29 @@
+@use "../abstracts/" as *;
 
+.section-about {
+  background-color: $color-gray-100;
+  padding: 15rem 10rem;
+  margin-top: -10vh;
+}
+
+.swing-element {
+  display: inline-block;
+  transform-origin: top center;
+}
+
+.swing-element.animate {
+  animation: swing 3s ease-in-out forwards;
+}
+
+.section-features {
+  padding: 15rem 10rem;
+  background-image:
+    linear-gradient(
+      to right bottom,
+      rgba(10, 13, 16, 0.85),
+      rgba(19, 24, 28, 0.85)
+    ),
+    url(../../assets/images/kb-back-2.jpg);
+  background-size: cover;
+  background-position: center;
+}

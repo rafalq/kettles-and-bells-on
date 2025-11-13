@@ -1,0 +1,83 @@
+.text {
+  &-center {
+    text-align: center;
+  }
+}
+
+.mb-xs {
+  margin-bottom: 0.25rem;
+}
+
+.mb-sm {
+  margin-bottom: 0.5rem;
+}
+
+.mb-md {
+  margin-bottom: 1rem;
+}
+
+.mb-lg {
+  margin-bottom: 2rem;
+}
+
+.mb-xl {
+  margin-bottom: 4rem;
+}
+
+.mb-2xl {
+  margin-bottom: 6rem;
+}
+
+// Generate margin utilities
+// @for $i from 0 through 20 {
+//   .m-#{$i} {
+//     margin: #{$i}rem;
+//   }
+//   .mt-#{$i} {
+//     margin-top: #{$i}rem;
+//   }
+//   .mr-#{$i} {
+//     margin-right: #{$i}rem;
+//   }
+//   .mb-#{$i} {
+//     margin-bottom: #{$i}rem;
+//   }
+//   .ml-#{$i} {
+//     margin-left: #{$i}rem;
+//   }
+//   .mx-#{$i} {
+//     margin-left: #{$i}rem;
+//     margin-right: #{$i}rem;
+//   }
+//   .my-#{$i} {
+//     margin-top: #{$i}rem;
+//     margin-bottom: #{$i}rem;
+//   }
+// }
+
+// Generate padding utilities
+// @for $i from 0 through 20 {
+//   .p-#{$i} {
+//     margin: #{$i}rem;
+//   }
+//   .pt-#{$i} {
+//     margin-top: #{$i}rem;
+//   }
+//   .pr-#{$i} {
+//     margin-right: #{$i}rem;
+//   }
+//   .pb-#{$i} {
+//     margin-bottom: #{$i}rem;
+//   }
+//   .pl-#{$i} {
+//     margin-left: #{$i}rem;
+//   }
+//   .px-#{$i} {
+//     margin-left: #{$i}rem;
+//     margin-right: #{$i}rem;
+//   }
+//   .py-#{$i} {
+//     margin-top: #{$i}rem;
+//     margin-bottom: #{$i}rem;
+//   }
+// }

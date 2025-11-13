@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
     />
 
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
+
+    <link rel="stylesheet" href="css/icon-font.css" />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <link
@@ -19,6 +23,8 @@
     />
 
     <title>Kettles & Bells On</title>
+
+    <script src="./js/pages/home/index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -26,14 +32,121 @@
         <img src="assets/images/logo.png" alt="Logo" class="header__logo" />
       </div>
       <div class="header__heading-box">
-        <h1 class="heading">
-          <span class="heading--main">Kettlebell</span>
-          <span class="heading--sub">Kings & Queens rise here</span>
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Kettlebell</span>
+          <span class="heading-primary--sub">Kings & Queens rise here</span>
         </h1>
-        <a href="#" class="btn btn--white btn--animated"
-          >Learn more &nbsp; &#8594;</a
-        >
+        <a href="#" class="btn btn--white btn--animated">Join Now</a>
       </div>
     </header>
+
+    <main>
+      <section class="section-about">
+        <div class="text-center mb-xl kettlebell-section">
+          <h2 class="heading-secondary mb-2xl">
+            Strength, mobility, endurance – all in
+            <span class="swing-element">
+              <object
+                data="./assets/svg/kettlebell.svg"
+                width="32"
+                height="32"
+              ></object> </span
+            >ne swing
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <h3 class="heading-tertiary">Burn fat, forge iron will</h3>
+            <p class="paragraph mt-2">
+              Every kettlebell swing torches calories while building unbreakable
+              mental toughness. High-intensity circuits melt stubborn fat and
+              replace it with lean muscle, turning every workout into a test of
+              grit you’ll learn to love.
+            </p>
+
+            <h3 class="heading-tertiary mb-xs">
+              Train to build strength and character
+            </h3>
+            <p class="paragraph mt-2">
+              Functional lifts and progressive overload sculpt raw power and
+              unshakable discipline. Each rep teaches patience, resilience, and
+              the quiet confidence that comes from pushing past yesterday’s
+              limits.
+            </p>
+
+            <a href="#" class="btn-link">Learn more&nbsp; &#8594;</a>
+          </div>
+          <div class="col">
+            <div class="composition">
+              <img
+                src="./assets/images/kb-4.jpg"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+              /><img
+                src="./assets/images/kb-6.jpg"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              /><img
+                src="./assets/images/kb-7.jpg"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-features">
+        <div class="row">
+          <div class="col">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-target"></i>
+              <h3 class="heading-teritiary feature-box__heading mb-sm">
+                Functional Strength Training
+              </h3>
+              <p class="feature-box__text">
+                Build real-world strength and improve mobility wiht expert-led
+                kettlebell workouts designed to challenge your entire body.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-share"></i>
+              <h3 class="heading-teritiary feature-box__heading mb-sm">
+                Small Group Sessions
+              </h3>
+              <p class="feature-box__text">
+                Train in a motivating, supportive environment with limited class
+                sizes to ensure personal attention and proper form.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-star"></i>
+              <h3 class="heading-teritiary feature-box__heading mb-sm">
+                Certified Instructors
+              </h3>
+              <p class="feature-box__text">
+                Learn from experienced and certified kettlebell coaches who
+                guide you safely toward your fitness goals.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+              <h3 class="heading-teritiary feature-box__heading mb-sm">
+                Community & Progress Tracking
+              </h3>
+              <p class="feature-box__text">
+                Join a like-minded fitness community and track your progress
+                through structured programs and performance check-ins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
