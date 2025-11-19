@@ -1,10 +1,5 @@
 @use "./variables" as *;
 
-@mixin section-base($padding-y: 20rem, $padding-x: 20rem, $margin-top: -10vh) {
-  padding: $padding-y $padding-x;
-  margin-top: $margin-top;
-}
-
 @mixin btn-link(
   $color: $color-primary,
   $font-size: 1.4rem,
@@ -41,4 +36,16 @@
       width: 100%;
     }
   }
+}
+
+@mixin absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin section-base($padding-y: 20rem, $padding-x: 20rem, $margin-top: -10vh) {
+  padding: $padding-y $padding-x;
+  margin-top: $margin-top;
 }

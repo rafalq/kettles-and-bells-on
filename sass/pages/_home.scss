@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-.book {
+.contact {
   background-image:
     linear-gradient(
       105deg,
@@ -9,11 +9,11 @@
       transparent 50%
     ),
     url(../../assets/images/kb-book-1.jpg);
-  background-size: 100%;
-  // background-position: 50% 65%;
+
+  background-size: 130%;
   border-radius: 0.3rem;
   box-shadow: $shadow-md;
-  height: 60rem;
+  height: auto;
 
   &__form {
     width: 50%;
@@ -26,7 +26,7 @@
   background-color: $color-gray-100;
 }
 
-.section-book {
+.section-contact {
   @include section-base($margin-top: 0);
   background-color: $color-gray-100;
 }
@@ -37,7 +37,7 @@
 }
 
 .section-features {
-  @include section-base;
+  @include section-base($padding-x: 8rem);
   background-image:
     linear-gradient(
       to right bottom,

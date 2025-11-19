@@ -8,10 +8,9 @@
   border-radius: 0.3rem;
   box-shadow: $shadow-md-light;
   width: 100%;
-  min-height: 34rem;
+  min-height: 38rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   transition: transform 0.3s;
 
   &:hover {
@@ -19,9 +18,8 @@
   }
 
   &__icon {
+    justify-self: flex-start;
     font-size: 6rem;
-    margin-bottom: 0.5rem;
-    display: inline-block;
     background-image: linear-gradient(
       to right,
       $color-accent-light,
