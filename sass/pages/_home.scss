@@ -32,7 +32,7 @@
 }
 
 .section-courses {
-  @include section-base;
+  @include section-base($padding-x: 5rem);
   background-color: $color-gray-100;
 }
 

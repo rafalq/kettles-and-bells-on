@@ -10,8 +10,37 @@
 
 html {
   font-size: 62.5%; /* 10px */
+
+  @include media(xxl) {
+    font-size: 62.5%; // 1rem = 10px
+  }
+
+  @include media(xl) {
+    font-size: 62.5%; // 1rem = 10px
+  }
+
+  @include media(lg) {
+    font-size: 62.5%; // 1rem = 10px
+  }
+
+  @include media(md) {
+    font-size: 56.25%; // 1rem = 9px, Body Text ≈ 14.4px
+  }
+
+  @include media(sm) {
+    font-size: 56.25%; // 1rem = 9px, Body Text ≈ 14.4px
+  }
+
+  @include media(xs) {
+    font-size: 50%; // 1rem = 8px, Body Text ≈ 12.8px
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 2rem;
+
+  @include media(lg) {
+    padding: 0;
+  }
 }

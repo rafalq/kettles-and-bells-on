@@ -49,3 +49,56 @@
   padding: $padding-y $padding-x;
   margin-top: $margin-top;
 }
+
+// BOOTSTRAP MEDIA QUERIES
+
+// X-Small	None	<576px              xs (mobile)
+// Small	sm	≥576px                  sm (mobile)
+// Medium	md	≥768px                  md (tablet / portrait)
+// Large	lg	≥992px                  lg (tablet / landscape)
+// Extra large	xl	≥1200px           xl (desktop / regular)
+// Extra extra large	xxl	≥1400px     xxl (desktop / large screens)
+
+@mixin media($breakpoint) {
+  @if $breakpoint == xxl {
+    @media (min-width: 87.56em) {
+      // 1401px / 16
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media (max-width: 87.5em) {
+      // 1400px / 16
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media (max-width: 75em) {
+      // 1200px / 16
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media (max-width: 62em) {
+      // 992px / 16
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media (max-width: 48em) {
+      // 768px / 16
+      @content;
+    }
+  }
+
+  @if $breakpoint == xs {
+    @media (max-width: 36em) {
+      // 576px / 16
+      @content;
+    }
+  }
+}

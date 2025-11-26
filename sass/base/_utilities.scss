@@ -96,28 +96,28 @@
 // }
 
 // Generate padding utilities
-// @for $i from 0 through 20 {
-//   .p-#{$i} {
-//     margin: #{$i}rem;
-//   }
-//   .pt-#{$i} {
-//     margin-top: #{$i}rem;
-//   }
-//   .pr-#{$i} {
-//     margin-right: #{$i}rem;
-//   }
-//   .pb-#{$i} {
-//     margin-bottom: #{$i}rem;
-//   }
-//   .pl-#{$i} {
-//     margin-left: #{$i}rem;
-//   }
-//   .px-#{$i} {
-//     margin-left: #{$i}rem;
-//     margin-right: #{$i}rem;
-//   }
-//   .py-#{$i} {
-//     margin-top: #{$i}rem;
-//     margin-bottom: #{$i}rem;
-//   }
-// }
+@for $i from 0 through 20 {
+  .p-#{$i} {
+    margin: #{$i}rem;
+  }
+  .pt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .pr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+  .pb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .pl-#{$i} {
+    margin-left: #{$i}rem;
+  }
+  .px-#{$i} {
+    margin-left: #{$i}rem;
+    margin-right: #{$i}rem;
+  }
+  .py-#{$i} {
+    margin-top: #{$i}rem;
+    margin-bottom: #{$i}rem;
+  }
+}

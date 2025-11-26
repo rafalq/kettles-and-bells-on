@@ -1,10 +1,10 @@
-// import { createIcons, Menu, ArrowRight, Globe } from "lucide";
+/**
+ * Main application entry point
+ * Imports and initializes all application modules
+ */
+
+// Import navigation module
 import "./navigation.js";
 
-// createIcons({
-//   icons: {
-//     Menu,
-//     ArrowRight,
-//     Globe,
-//   },
-// });
+// Import home page module
+import "./pages/home/index.js";
