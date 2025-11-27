@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+
 .text {
   &-center {
     text-align: center;
@@ -6,66 +8,130 @@
 
 .mb-xs {
   margin-bottom: 0.25rem;
+
+  @include media(md) {
+    margin-bottom: 0.12rem;
+  }
 }
 
 .mb-sm {
   margin-bottom: 0.5rem;
+
+  @include media(md) {
+    margin-bottom: 0.25rem;
+  }
 }
 
 .mb-md {
   margin-bottom: 1rem;
+
+  @include media(md) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .mb-lg {
   margin-bottom: 2rem;
+
+  @include media(md) {
+    margin-bottom: 1rem;
+  }
 }
 
 .mb-xl {
   margin-bottom: 4rem;
+
+  @include media(md) {
+    margin-bottom: 2rem;
+  }
 }
 
 .mb-2xl {
   margin-bottom: 6rem;
+
+  @include media(md) {
+    margin-bottom: 3rem;
+  }
 }
 
 .mb-3xl {
   margin-bottom: 8rem;
+
+  @include media(md) {
+    margin-bottom: 4rem;
+  }
 }
 
-.mb-3xl {
+.mb-4xl {
   margin-bottom: 10rem;
+
+  @include media(md) {
+    margin-bottom: 5rem;
+  }
 }
 
 .mt-xs {
   margin-top: 0.25rem;
+
+  @include media(md) {
+    margin-top: 0.12rem;
+  }
 }
 
 .mt-sm {
   margin-top: 0.5rem;
+
+  @include media(md) {
+    margin-top: 0.25rem;
+  }
 }
 
 .mt-md {
   margin-top: 1rem;
+
+  @include media(md) {
+    margin-top: 0.5rem;
+  }
 }
 
 .mt-lg {
   margin-top: 2rem;
+
+  @include media(md) {
+    margin-top: 1rem;
+  }
 }
 
 .mt-xl {
   margin-top: 4rem;
+
+  @include media(md) {
+    margin-top: 2rem;
+  }
 }
 
 .mt-2xl {
   margin-top: 6rem;
+
+  @include media(md) {
+    margin-top: 3rem;
+  }
 }
 
 .mt-3xl {
   margin-top: 8rem;
+
+  @include media(md) {
+    margin-top: 4rem;
+  }
 }
 
 .mt-4xl {
   margin-top: 10rem;
+
+  @include media(md) {
+    margin-top: 5rem;
+  }
 }
 
 // Generate margin utilities

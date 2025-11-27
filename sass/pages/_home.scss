@@ -24,20 +24,40 @@
 .section-about {
   @include section-base;
   background-color: $color-gray-100;
+
+  @include media(md) {
+    @include section-base($padding-x: 10rem);
+  }
+
+  @include media(sm) {
+    @include section-base($padding-y: 12rem, $padding-x: 5rem);
+  }
 }
 
 .section-contact {
   @include section-base($margin-top: 0);
   background-color: $color-gray-100;
+
+  @include media(sm) {
+    @include section-base($padding-x: 15rem);
+  }
+
+  @include media(xs) {
+    @include section-base($padding-x: 5rem);
+  }
 }
 
 .section-courses {
   @include section-base($padding-x: 5rem);
   background-color: $color-gray-100;
+
+  @include media(sm) {
+    @include section-base($padding-y: 15rem, $padding-x: 10rem);
+  }
 }
 
 .section-features {
-  @include section-base($padding-x: 8rem);
+  @include section-base($padding-x: 5rem);
   background-image:
     linear-gradient(
       to right bottom,
@@ -53,12 +73,23 @@
   & > * {
     transform: skewY(3deg);
   }
+
+  @include media(sm) {
+    @include section-base($padding-y: 5rem, $padding-x: 10rem);
+  }
+
+  @include media(xs) {
+    @include section-base($padding-y: 5rem, $padding-x: 5rem);
+  }
 }
 
 .section-stories {
   @include section-base($margin-top: 0);
   position: relative;
-  background-color: rgba($color-black, 0.65);
+
+  @include media(md) {
+    @include section-base($padding-y: 10, $padding-x: 5rem);
+  }
 }
 
 .swing-element {

@@ -11,6 +11,14 @@
   padding-left: 9rem;
   font-size: $text-base;
 
+  @include media(md) {
+    width: 100%;
+  }
+
+  @include media(sm) {
+    padding-left: 5rem;
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
