@@ -2102,6 +2102,21 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 48em) {
+  .contact__form {
+    padding: 4rem;
+  }
+}
+@media (max-width: 36em) {
+  .contact__form {
+    padding: 3rem;
+  }
+}
+@media (max-width: 26.5em) {
+  .contact__form {
+    padding: 2rem;
+  }
+}
 
 .section-about {
   padding: 20rem 20rem;

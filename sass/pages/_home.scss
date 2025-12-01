@@ -52,6 +52,18 @@
     @include media(lg) {
       width: 100%;
     }
+
+    @include media(sm) {
+      padding: 4rem;
+    }
+
+    @include media(xs) {
+      padding: 3rem;
+    }
+
+    @include media(xxs) {
+      padding: 2rem;
+    }
   }
 }
 
