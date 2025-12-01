@@ -75,7 +75,9 @@
           $color-primary-light,
           $color-primary-dark
         ),
-        url(assets/images/sfg.jpg);
+        // TODO for DEV only
+        // url(../../assets/images/sfg.jpg);
+        url(/assets/images/sfg.jpg);
     }
 
     &--2 {
@@ -85,7 +87,9 @@
           $color-accent-light,
           $color-accent-dark
         ),
-        url(assets/images/seniors.jpg);
+        // TODO for DEV only
+        // url(../../assets/images/seniors.jpg);
+        url(/assets/images/seniors.jpg);
     }
 
     &--3 {
@@ -95,7 +99,9 @@
           $color-primary-light,
           $color-primary-dark
         ),
-        url(assets/images/ma.jpg);
+        // TODO for DEV only
+        // url(../../assets/images/ma.jpg);
+        url(/assets/images/ma.jpg);
       background-position: bottom;
     }
   }
