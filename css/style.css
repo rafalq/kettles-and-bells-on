@@ -125,12 +125,6 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 2rem;
-}
-@media (max-width: 75em) {
-  body {
-    padding: 0;
-  }
 }
 
 body {

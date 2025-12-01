@@ -40,9 +40,4 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 2rem;
-
-  @include media(lg) {
-    padding: 0;
-  }
 }
