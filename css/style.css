@@ -1210,13 +1210,13 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .card__picture--1 {
-  background-image: linear-gradient(to right bottom, #6e9ab3, #2f4f4f), url(./assets/images/sfg.jpg);
+  background-image: linear-gradient(to right bottom, #6e9ab3, #2f4f4f), url(../assets/images/sfg.jpg);
 }
 .card__picture--2 {
-  background-image: linear-gradient(to right bottom, #d6ba80, #8f7642), url(./assets/images/seniors.jpg);
+  background-image: linear-gradient(to right bottom, #d6ba80, #8f7642), url(../assets/images/seniors.jpg);
 }
 .card__picture--3 {
-  background-image: linear-gradient(to right bottom, #6e9ab3, #2f4f4f), url(./assets/images/ma.jpg);
+  background-image: linear-gradient(to right bottom, #6e9ab3, #2f4f4f), url(../assets/images/ma.jpg);
   background-position: bottom;
 }
 .card__heading {
