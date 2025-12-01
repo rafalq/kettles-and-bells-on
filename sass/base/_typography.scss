@@ -23,8 +23,19 @@ body {
     animation-timing-function: ease-out;
 
     @include media(sm) {
-      letter-spacing: 1rem;
-      font-family: 5rem;
+      letter-spacing: 1.2rem;
+      font-size: 5rem;
+    }
+
+    @include media(xs) {
+      font-size: 4rem;
+      letter-spacing: 0.5rem;
+      word-break: break-word;
+    }
+
+    @include media(xxs) {
+      font-size: 3rem;
+      word-break: break-word;
     }
   }
 
@@ -40,6 +51,11 @@ body {
 
     @include media(sm) {
       letter-spacing: 0.5rem;
+    }
+
+    @include media(xs) {
+      font-size: 1.5rem;
+      word-break: break-word;
     }
   }
 }
@@ -63,7 +79,11 @@ body {
   }
 
   @include media(sm) {
-    font-family: 2.5rem;
+    font-size: 2.5rem;
+  }
+
+  @include media(xs) {
+    font-size: 2rem;
   }
 }
 

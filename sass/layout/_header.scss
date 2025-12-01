@@ -11,7 +11,7 @@
     url(../assets/images/hero-small.avif);
   background-size: cover;
   background-position: bottom;
-  // position: relative;
+  position: relative;
   color: $color-primary;
   z-index: 10;
 
@@ -44,12 +44,45 @@
 
   &__logo-box {
     position: absolute;
-    top: 4rem;
+    top: 2rem;
     left: 4rem;
+
+    @include media(md) {
+      top: 1rem;
+      right: 2rem;
+    }
+
+    @include media(sm) {
+      height: 5rem;
+      width: 5rem;
+      top: 0.5rem;
+      right: 0.8rem;
+    }
+
+    @include media(xs) {
+      height: 4rem;
+      width: 4rem;
+      top: 0;
+      right: 0.4rem;
+    }
+
+    @include media(xxs) {
+      height: 3rem;
+      width: 3rem;
+      right: 0.2rem;
+    }
   }
 
   &__logo {
     height: 9.5rem;
+
+    @include media(md) {
+      height: 7.5rem;
+    }
+
+    @include media(xs) {
+      height: 5.5rem;
+    }
   }
 
   &__heading-box {
@@ -59,5 +92,14 @@
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 6rem;
+    width: 100%;
+
+    @include media(xs) {
+      padding: 2rem 1rem;
+    }
+
+    @include media(xxs) {
+      padding: 1rem 0.5rem;
+    }
   }
 }

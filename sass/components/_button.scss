@@ -16,6 +16,11 @@
     position: relative;
 
     transition: all 0.2s;
+
+    @include media(sm) {
+      padding: 1rem 2rem;
+      font-size: $text-sm;
+    }
   }
 
   &:hover {
