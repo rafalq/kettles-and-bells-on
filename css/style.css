@@ -1043,7 +1043,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
 .bg-video__content {
@@ -2147,13 +2147,13 @@ body {
 }
 @media (max-width: 48em) {
   .section-contact {
-    padding: 20rem 5rem;
+    padding: 10rem 5rem;
     margin-top: -10vh;
   }
 }
 @media (max-width: 36em) {
   .section-contact {
-    padding: 20rem 2rem;
+    padding: 10rem 2rem;
     margin-top: -10vh;
   }
 }
@@ -2171,13 +2171,13 @@ body {
 }
 @media (max-width: 48em) {
   .section-courses {
-    padding: 15rem 10rem;
+    padding: 10rem 10rem;
     margin-top: -10vh;
   }
 }
 @media (max-width: 36em) {
   .section-courses {
-    padding: 20rem 5rem;
+    padding: 10rem 5rem;
     margin-top: -10vh;
   }
 }

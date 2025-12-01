@@ -90,11 +90,11 @@
   }
 
   @include media(sm) {
-    @include section-base($padding-x: 5rem);
+    @include section-base($padding-y: 10rem, $padding-x: 5rem);
   }
 
   @include media(xs) {
-    @include section-base($padding-x: 2rem);
+    @include section-base($padding-y: 10rem, $padding-x: 2rem);
   }
 }
 
@@ -107,11 +107,11 @@
   }
 
   @include media(sm) {
-    @include section-base($padding-y: 15rem, $padding-x: 10rem);
+    @include section-base($padding-y: 10rem, $padding-x: 10rem);
   }
 
   @include media(xs) {
-    @include section-base($padding-x: 5rem);
+    @include section-base($padding-y: 10rem, $padding-x: 5rem);
   }
 }
 
