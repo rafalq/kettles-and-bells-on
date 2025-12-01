@@ -18,19 +18,9 @@
     text-align: center;
     cursor: pointer;
 
-    @include media(md) {
-      top: 4rem;
-      right: 4rem;
-    }
-
     @include media(sm) {
       top: 3rem;
       right: 3rem;
-    }
-
-    @include media(xxs) {
-      top: 3rem;
-      right: 7.5rem;
     }
   }
 

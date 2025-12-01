@@ -125,6 +125,17 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 2rem;
+}
+@media (max-width: 75em) {
+  body {
+    padding: 0;
+  }
+}
+@media (max-width: 48em) {
+  body {
+    padding: 0;
+  }
 }
 
 body {
@@ -1670,22 +1681,10 @@ body {
   text-align: center;
   cursor: pointer;
 }
-@media (max-width: 62em) {
-  .navigation__button {
-    top: 4rem;
-    right: 4rem;
-  }
-}
 @media (max-width: 48em) {
   .navigation__button {
     top: 3rem;
     right: 3rem;
-  }
-}
-@media (max-width: 26.5em) {
-  .navigation__button {
-    top: 3rem;
-    right: 7.5rem;
   }
 }
 .navigation__background {
@@ -1808,7 +1807,6 @@ body {
   background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-small.avif);
   background-size: cover;
   background-position: bottom;
-  position: relative;
   color: #4a708b;
   z-index: 10;
 }
@@ -1831,7 +1829,7 @@ body {
 }
 .header__logo-box {
   position: absolute;
-  top: 2rem;
+  top: 4rem;
   left: 4rem;
 }
 .header__logo {

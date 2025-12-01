@@ -11,7 +11,7 @@
     url(../assets/images/hero-small.avif);
   background-size: cover;
   background-position: bottom;
-  position: relative;
+  // position: relative;
   color: $color-primary;
   z-index: 10;
 
@@ -44,7 +44,7 @@
 
   &__logo-box {
     position: absolute;
-    top: 2rem;
+    top: 4rem;
     left: 4rem;
   }
 
