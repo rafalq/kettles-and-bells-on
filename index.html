@@ -82,10 +82,12 @@
             >ne swing
           </h2>
         </div>
-        <div class="row gx-2">
-          <div class="col-12 col-xl-5">
-            <h3 class="heading-tertiary--primary">Burn fat, forge iron will</h3>
-            <p class="paragraph mt-2">
+        <div class="row gy-4 gy-md-0">
+          <div class="col-12 col-md-5">
+            <h3 class="heading-tertiary--primary me-2">
+              Burn fat, forge iron will
+            </h3>
+            <p class="paragraph mt-2 me-2">
               Every kettlebell swing torches calories while building unbreakable
               mental toughness. High-intensity circuits melt stubborn fat and
               replace it with lean muscle, turning every workout into a test of
@@ -102,25 +104,51 @@
               limits.
             </p>
 
-            <a href="#" class="btn-link">Learn more&nbsp; &#8594;</a>
+            <a href="#" class="btn-link d-md-inline d-none"
+              >Learn more&nbsp; &#8594;</a
+            >
           </div>
-          <div class="col-12 col-xl-7">
+          <div class="col-12 col-md-7">
             <div class="composition">
               <img
-                src="./assets/images/kb-6.jpg"
-                alt="Photo 1"
+                src="./assets/images/kb-6-1x.webp"
+                srcset="
+                  ./assets/images/kb-6-1x.webp  800w,
+                  ./assets/images/kb-6-2x.webp 1200w
+                "
+                sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
+                alt="A man is doing pushups with kettlebells"
                 class="composition__photo composition__photo--p1"
-              /><img
-                src="./assets/images/kb-4.jpg"
-                alt="Photo 2"
+              />
+
+              <img
+                src="./assets/images/kb-7-1x.webp"
+                srcset="
+                  ./assets/images/kb-7-1x.webp  800w,
+                  ./assets/images/kb-7-2x.webp 1200w
+                "
+                sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
+                alt="A man is doing kettlebell swing"
                 class="composition__photo composition__photo--p2"
-              /><img
-                src="./assets/images/kb-8.jpg"
-                alt="Photo 3"
+              />
+
+              <img
+                src="./assets/images/kb-w-3-1x.webp"
+                srcset="
+                  ./assets/images/kb-w-3-1x.webp  800w,
+                  ./assets/images/kb-w-3-2x.webp 1200w
+                "
+                sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
+                alt="Woman with kettlebell"
                 class="composition__photo composition__photo--p3"
               />
             </div>
           </div>
+        </div>
+        <div class="section-about__link">
+          <a href="#" class="btn-link d-inline d-md-none"
+            >Learn more&nbsp; &#8594;</a
+          >
         </div>
       </section>
       <section class="section-features" id="section-features">
@@ -207,7 +235,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-3 mx-4 my-4 my-md-0 card">
+            <div class="col-12 col-lg-3 mx-4 my-4 my-lg-0 card">
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--2">&nbsp;</div>
                 <h4 class="card__heading">
@@ -368,7 +396,7 @@
                 <label for="email" class="form__label">Email</label>
               </div>
               <div class="form__group">
-                <h3 class="heading-tertiary--accent mb-md mt-lg">Courses</h3>
+                <h3 class="heading-tertiary--accent mt-lg mb-xl">Courses</h3>
                 <div class="form__radio-group">
                   <div class="form__radio-group__item">
                     <input
@@ -422,7 +450,26 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="./assets/images/logo.png" alt="Logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              ./assets/images/logo-1x.webp 1x,
+              ./assets/images/logo-2x.webp 2x,
+              ./assets/images/logo-3x.webp 3x
+            "
+            media="(max-width: 48em)"
+          />
+          <img
+            src="./assets/images/logo.png"
+            srcset="
+              ./assets/images/logo-1x.webp 1x,
+              ./assets/images/logo-2x.webp 2x,
+              ./assets/images/logo-3x.webp 3x
+            "
+            alt="Logo"
+            class="footer__logo"
+          />
+        </picture>
       </div>
       <div class="footer-row">
         <div class="footer__nav">

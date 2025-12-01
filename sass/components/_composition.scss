@@ -3,20 +3,27 @@
 .composition {
   position: relative;
   margin-left: 4rem;
-  margin-top: 0;
+  margin-top: 4rem;
 
   &__photo {
-    width: 75%;
+    width: 85%;
     box-shadow: $shadow-lg;
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
-    outline-offset: 1rem;
+    outline-offset: 2rem;
 
-    @include media(lg) {
+    @include media(xxl) {
+      width: 33.333333%;
       float: left;
       position: relative;
+      box-shadow: $shadow-md;
+    }
+
+    @include media(sm) {
       width: 33.333333%;
+      float: left;
+      position: relative;
       box-shadow: $shadow-md;
     }
 
@@ -24,17 +31,32 @@
       left: 0rem;
       top: -2rem;
 
-      @include media(lg) {
+      @include media(xxl) {
+        left: -3rem;
+        top: 0;
+        transform: scale(1.2);
+      }
+
+      @include media(sm) {
+        left: -3rem;
         top: 0;
         transform: scale(1.2);
       }
     }
 
     &--p2 {
-      right: 0;
-      top: 2rem;
+      right: -6rem;
+      top: 4rem;
 
-      @include media(lg) {
+      @include media(xxl) {
+        left: -2rem;
+        top: -1rem;
+        transform: scale(1.3);
+        z-index: 100;
+      }
+
+      @include media(sm) {
+        left: -2rem;
         top: -1rem;
         transform: scale(1.3);
         z-index: 100;
@@ -42,33 +64,45 @@
     }
 
     &--p3 {
-      left: 20%;
-      top: 10rem;
+      left: 10%;
+      top: 14rem;
 
-      @include media(lg) {
+      @include media(xxl) {
+        top: 1rem;
+        left: 0;
+        transform: scale(1.1);
+      }
+
+      @include media(sm) {
         top: 1rem;
         left: 0;
         transform: scale(1.1);
       }
     }
 
-    @media (min-width: 1201px) {
-      &:hover {
-        outline: 1rem solid $color-accent-light;
-        transform: scale(1.05) translateY(-0.5rem);
-        box-shadow: $shadow-xl;
-        z-index: 20;
-      }
+    &:hover {
+      outline: 1rem solid $color-accent-light;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: $shadow-xl;
+      z-index: 200;
     }
   }
 
-  @media (min-width: 1201px) {
+  @include media(md) {
+    margin-top: 2rem;
+
     &:hover &__photo:not(:hover) {
       transform: scale(0.95);
     }
   }
-  @include media(lg) {
-    margin-left: 0;
-    margin-top: 5rem;
-  }
+
+  // @include media(xxl) {
+  //   margin-left: 0;
+  //   margin-top: 5rem;
+  // }
+
+  // @include media(sm) {
+  //   margin-left: 0;
+  //   margin-top: 5rem;
+  // }
 }

@@ -10,19 +10,54 @@
     ),
     url(../../assets/images/kb-book-1.jpg);
 
-  background-size: 130%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
   border-radius: 0.3rem;
   box-shadow: $shadow-md;
-  height: auto;
+
+  @include media(xl) {
+    background-image:
+      linear-gradient(
+        105deg,
+        rgba($color-black, 0.9) 0%,
+        rgba($color-black, 0.75) 65%,
+        transparent 65%
+      ),
+      url(../../assets/images/kb-book-1.jpg);
+    background-size: cover;
+    background-position: center right;
+  }
+
+  @include media(lg) {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba($color-black, 0.9) 0%,
+        rgba($color-black, 0.75) 100%
+      ),
+      url(../../assets/images/kb-book-1.jpg);
+    background-size: cover;
+    background-position: center right;
+  }
 
   &__form {
     width: 50%;
-    padding: 6rem;
+    padding: 4rem 6rem;
+
+    @include media(xl) {
+      width: 65%;
+    }
+
+    @include media(lg) {
+      width: 100%;
+    }
   }
 }
 
 .section-about {
   @include section-base;
+  position: relative;
   background-color: $color-gray-100;
 
   @include media(md) {
@@ -30,20 +65,29 @@
   }
 
   @include media(sm) {
-    @include section-base($padding-y: 12rem, $padding-x: 5rem);
+    @include section-base($padding-x: 5rem);
   }
+}
+
+.section-about__link {
+  position: absolute;
+  bottom: 14rem;
 }
 
 .section-contact {
   @include section-base($margin-top: 0);
   background-color: $color-gray-100;
 
+  @include media(md) {
+    @include section-base($padding-x: 10rem);
+  }
+
   @include media(sm) {
-    @include section-base($padding-x: 15rem);
+    @include section-base($padding-x: 5rem);
   }
 
   @include media(xs) {
-    @include section-base($padding-x: 5rem);
+    @include section-base($padding-x: 2rem);
   }
 }
 
@@ -51,8 +95,16 @@
   @include section-base($padding-x: 5rem);
   background-color: $color-gray-100;
 
+  @include media(md) {
+    @include section-base($padding-y: 15rem);
+  }
+
   @include media(sm) {
     @include section-base($padding-y: 15rem, $padding-x: 10rem);
+  }
+
+  @include media(xs) {
+    @include section-base($padding-x: 5rem);
   }
 }
 
@@ -68,18 +120,22 @@
   background-size: cover;
   background-position: center;
 
-  transform: skewY(-3deg);
+  transform: skewY(-5deg);
 
   & > * {
-    transform: skewY(3deg);
+    transform: skewY(5deg);
   }
 
   @include media(sm) {
-    @include section-base($padding-y: 5rem, $padding-x: 10rem);
+    @include section-base(
+      $padding-y: 10rem,
+      $padding-x: 10rem,
+      $margin-top: -5vh
+    );
   }
 
   @include media(xs) {
-    @include section-base($padding-y: 5rem, $padding-x: 5rem);
+    @include section-base($padding-y: 8rem, $padding-x: 5rem);
   }
 }
 
@@ -88,7 +144,11 @@
   position: relative;
 
   @include media(md) {
-    @include section-base($padding-y: 10, $padding-x: 5rem);
+    @include section-base($padding-y: 15rem, $padding-x: 10rem);
+  }
+
+  @include media(sm) {
+    @include section-base($padding-x: 5rem);
   }
 }
 

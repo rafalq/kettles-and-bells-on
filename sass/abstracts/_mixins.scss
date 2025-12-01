@@ -52,14 +52,23 @@
 
 // BOOTSTRAP MEDIA QUERIES
 
-// X-Small	None	<576px              xs (mobile)
+// XX-Small  xxs < 420px              xxs (mobile)
+// X-Small	xs	≥ 421px               xs (mobile)
 // Small	sm	≥576px                  sm (mobile)
 // Medium	md	≥768px                  md (tablet / portrait)
 // Large	lg	≥992px                  lg (tablet / landscape)
 // Extra large	xl	≥1200px           xl (desktop / regular)
 // Extra extra large	xxl	≥1400px     xxl (desktop / large screens)
+// Extra extra extra large	xxl	≥2000px     xxxl (desktop / very large screens)
 
 @mixin media($breakpoint) {
+  @if $breakpoint == xxxl {
+    @media (min-width: 125em) {
+      // 2001px / 16
+      @content;
+    }
+  }
+
   @if $breakpoint == xxl {
     @media (min-width: 87.56em) {
       // 1401px / 16
@@ -98,6 +107,13 @@
   @if $breakpoint == xs {
     @media (max-width: 36em) {
       // 576px / 16
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxs {
+    @media (max-width: 26.5em) {
+      // 421px / 16
       @content;
     }
   }
