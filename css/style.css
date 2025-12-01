@@ -168,13 +168,14 @@ body {
 @media (max-width: 36em) {
   .heading-primary--main {
     font-size: 4rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.6rem;
     word-break: break-word;
   }
 }
 @media (max-width: 26.5em) {
   .heading-primary--main {
-    font-size: 3rem;
+    font-size: 2.7rem;
+    letter-spacing: 0.25rem;
     word-break: break-word;
   }
 }
@@ -2124,6 +2125,13 @@ body {
 .section-about__link {
   position: absolute;
   bottom: 14rem;
+}
+
+@media (max-width: 48em) {
+  .swing-element > object {
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
 .section-contact {

@@ -74,6 +74,13 @@
   bottom: 14rem;
 }
 
+.swing-element > object {
+  @include media(sm) {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
 .section-contact {
   @include section-base($margin-top: 0);
   background-color: $color-gray-100;
