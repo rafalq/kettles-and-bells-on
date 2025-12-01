@@ -64,39 +64,38 @@
   &__picture {
     background-size: cover;
     height: 23rem;
-    filter: grayscale(100%);
-    // background-blend-mode: screen;
+    background-blend-mode: screen;
 
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
       background-image:
-        // linear-gradient(
-        //   to right bottom,
-        //   $color-primary-light,
-        //   $color-primary-dark
-        // ),
-        url(../../assets/images/sfg.jpg);
+        linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(assets/images/sfg.jpg);
     }
 
     &--2 {
       background-image:
-        // linear-gradient(
-        //   to right bottom,
-        //   $color-primary-light,
-        //   $color-primary-dark
-        // ),
-        url(../../assets/images/seniors.jpg);
+        linear-gradient(
+          to right bottom,
+          $color-accent-light,
+          $color-accent-dark
+        ),
+        url(assets/images/seniors.jpg);
     }
 
     &--3 {
       background-image:
-        // linear-gradient(
-        //   to right bottom,
-        //   $color-primary-light,
-        //   $color-primary-dark
-        // ),
-        url(../../assets/images/ma.jpg);
+        linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(assets/images/ma.jpg);
       background-position: bottom;
     }
   }

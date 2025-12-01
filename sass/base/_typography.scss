@@ -28,14 +28,14 @@ body {
     }
 
     @include media(xs) {
-      font-size: 4rem;
-      letter-spacing: 0.6rem;
+      font-size: 4.5rem;
+      letter-spacing: 0.8rem;
       word-break: break-word;
     }
 
     @include media(xxs) {
-      font-size: 2.7rem;
-      letter-spacing: 0.25rem;
+      font-size: 2.8rem;
+      letter-spacing: 0.3rem;
       word-break: break-word;
     }
   }
