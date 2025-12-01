@@ -32,13 +32,13 @@
       top: -2rem;
 
       @include media(xxl) {
-        left: -3rem;
+        left: -2rem;
         top: 0;
         transform: scale(1.2);
       }
 
       @include media(sm) {
-        left: -3rem;
+        left: -2rem;
         top: 0;
         transform: scale(1.2);
       }
@@ -68,14 +68,14 @@
       top: 14rem;
 
       @include media(xxl) {
-        top: 1rem;
-        left: 0;
+        top: 0;
+        left: -2rem;
         transform: scale(1.1);
       }
 
       @include media(sm) {
-        top: 1rem;
-        left: 0;
+        top: 0;
+        left: -2rem;
         transform: scale(1.1);
       }
     }

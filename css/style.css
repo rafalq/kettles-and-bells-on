@@ -1361,14 +1361,14 @@ body {
 }
 @media (min-width: 87.56em) {
   .composition__photo--p1 {
-    left: -3rem;
+    left: -2rem;
     top: 0;
     transform: scale(1.2);
   }
 }
 @media (max-width: 48em) {
   .composition__photo--p1 {
-    left: -3rem;
+    left: -2rem;
     top: 0;
     transform: scale(1.2);
   }
@@ -1399,15 +1399,15 @@ body {
 }
 @media (min-width: 87.56em) {
   .composition__photo--p3 {
-    top: 1rem;
-    left: 0;
+    top: 0;
+    left: -2rem;
     transform: scale(1.1);
   }
 }
 @media (max-width: 48em) {
   .composition__photo--p3 {
-    top: 1rem;
-    left: 0;
+    top: 0;
+    left: -2rem;
     transform: scale(1.1);
   }
 }
