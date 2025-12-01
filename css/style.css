@@ -1704,11 +1704,6 @@ body {
     right: 3.5rem;
   }
 }
-@media (max-width: 26.5em) {
-  .navigation__background {
-    right: 8rem;
-  }
-}
 .navigation__nav {
   height: 100vh;
   width: 0;
