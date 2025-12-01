@@ -77,7 +77,7 @@
         ),
         // TODO for DEV only
         // url(../../assets/images/sfg.jpg);
-        url(/assets/images/sfg.jpg);
+        url(./assets/images/sfg.jpg);
     }
 
     &--2 {
@@ -89,7 +89,7 @@
         ),
         // TODO for DEV only
         // url(../../assets/images/seniors.jpg);
-        url(/assets/images/seniors.jpg);
+        url(./assets/images/seniors.jpg);
     }
 
     &--3 {
@@ -101,7 +101,7 @@
         ),
         // TODO for DEV only
         // url(../../assets/images/ma.jpg);
-        url(/assets/images/ma.jpg);
+        url(./assets/images/ma.jpg);
       background-position: bottom;
     }
   }
