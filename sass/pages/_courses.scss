@@ -71,12 +71,18 @@
   }
 
   &__card {
-    width: 90%;
+    width: 95%;
+    min-height: 60rem;
     background-color: $color-white;
     box-shadow: $shadow-md;
-    margin: 0 auto;
+    margin: 0 auto 8rem auto;
     border-radius: 1.5rem;
-    overflow: hidden;
+    overflow: visible;
+
+    @include media(lg) {
+      width: 98%;
+      min-height: 65rem;
+    }
 
     &--left {
       padding: 0;
@@ -86,7 +92,12 @@
       background-repeat: no-repeat;
       background-blend-mode: screen;
 
-      min-height: 500px;
+      min-height: 60rem;
+      border-radius: 1.5rem 0 0 1.5rem;
+
+      @include media(lg) {
+        min-height: 65rem;
+      }
 
       &--sfg-1 {
         background-image:
@@ -147,10 +158,6 @@
           ),
           url("../assets/images/ma.jpg");
       }
-
-      // @include media(lg-down) {
-      //   min-height: 300px;
-      // }
     }
 
     &--right {
@@ -159,6 +166,8 @@
       justify-content: flex-start;
       height: 100%;
       padding: 2rem 4rem;
+      border-radius: 0 1.5rem 1.5rem 0;
+      overflow: hidden;
     }
 
     &__details ul {
@@ -180,6 +189,11 @@
       display: flex;
       align-self: flex-end;
       padding-top: 4rem;
+      margin-top: 2rem;
+
+      @include media(sm) {
+        align-self: center;
+      }
     }
   }
 
@@ -188,6 +202,7 @@
     padding: 2rem;
     max-height: 37rem;
     overflow-y: auto;
+    margin: 0 auto;
 
     &__text {
       padding: 0.5rem;
