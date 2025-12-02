@@ -2465,4 +2465,128 @@ body {
   background-color: #2f4f4f;
 }
 
+.form {
+  padding: 6rem 2rem 2rem 2rem;
+}
+.form__input {
+  color: #3e3e3e;
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: #fff;
+  border: none;
+  border-bottom: 0.45rem solid transparent;
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  scale: 1;
+  transition: all 0.3s;
+}
+.form__input:focus {
+  scale: 1.05;
+  outline: none;
+  box-shadow: 0 1rem 2rem -0.2rem rgba(255, 255, 255, 0.25);
+  border-bottom: 0.45rem solid #3a7ca5;
+}
+.form__input:focus:invalid {
+  border-bottom: 0.45rem solid #c94c4c;
+}
+.form__input:focus:valid {
+  border-bottom: 0.45rem solid #3c9a5f;
+}
+.form__input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form__label {
+  color: #dadada;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+  display: block;
+  transition: all 0.3s;
+}
+.form__radio-group, .form__checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+@media (max-width: 48em) {
+  .form__radio-group, .form__checkbox-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.form__radio-group__item, .form__checkbox-group__item {
+  display: flex;
+  justify-items: center;
+  gap: 0.5rem;
+  color: #dadada;
+}
+.form__radio-input, .form__checkbox-input {
+  display: none;
+}
+.form__radio-label, .form__checkbox-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding-left: 4rem;
+  position: relative;
+}
+.form__radio-button, .form__checkbox-button {
+  height: 3rem;
+  width: 3rem;
+  border: 0.5rem solid #d6ba80;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: -0.35rem;
+}
+.form__radio-button::after, .form__checkbox-button::after {
+  content: "";
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c1a661;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after, .form__checkbox-input:checked ~ .form__checkbox-label .form__checkbox-button::after {
+  opacity: 1;
+}
+.form .remember-me-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+.form .no-account-link {
+  font-size: 1.6rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.form .login-button-box {
+  width: 100%;
+  display: flex;
+  margin-top: 4rem;
+}
+.form #login-button {
+  margin-left: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
