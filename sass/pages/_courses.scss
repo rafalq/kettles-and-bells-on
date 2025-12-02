@@ -1,0 +1,213 @@
+@use "../abstracts/" as *;
+
+.courses-page {
+  &__input {
+    color: $color-gray-700;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: $color-white;
+    border: 1px solid rgba($color-black, 0.1);
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    scale: 1;
+    transition: all 0.3s;
+
+    &:focus {
+      scale: 1.05;
+      outline: none;
+      box-shadow: $shadow-lg-light;
+      border-bottom: 0.45rem solid $color-info;
+    }
+
+    &:focus:invalid {
+      border-bottom: 0.45rem solid $color-error;
+    }
+
+    &:focus:valid {
+      border-bottom: 0.45rem solid $color-success;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-gray-300;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__label {
+    color: $color-gray-200;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  &__section-courses {
+    @include section-base($padding-x: 5rem);
+
+    height: 100%;
+
+    @include media(md) {
+      @include section-base($padding-y: 15rem);
+    }
+
+    @include media(sm) {
+      @include section-base($padding-y: 10rem, $padding-x: 10rem);
+    }
+
+    @include media(xs) {
+      @include section-base($padding-y: 10rem, $padding-x: 5rem);
+    }
+  }
+
+  &__card {
+    width: 90%;
+    background-color: $color-white;
+    box-shadow: $shadow-md;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    &--left {
+      padding: 0;
+
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-blend-mode: screen;
+
+      min-height: 500px;
+
+      &--sfg-1 {
+        background-image:
+          linear-gradient(
+            to right bottom,
+            $color-primary-light,
+            $color-primary-dark
+          ),
+          url("../assets/images/sfg.jpg");
+      }
+
+      &--sfg-2 {
+        background-image:
+          linear-gradient(
+            to right bottom,
+            $color-accent-light,
+            $color-accent-dark
+          ),
+          url("../assets/images/sfg.jpg");
+      }
+
+      &--rkc {
+        background-image:
+          linear-gradient(
+            to right bottom,
+            rgba($color-error, 0.5),
+            rgba($color-error, 0.9)
+          ),
+          url("../assets/images/sfg.jpg");
+      }
+
+      &--senior {
+        background-image:
+          linear-gradient(
+            to right bottom,
+            rgba($color-info, 0.5),
+            rgba($color-info, 0.9)
+          ),
+          url("../assets/images/seniors.jpg");
+      }
+
+      &--women {
+        background-image:
+          linear-gradient(
+            to right bottom,
+            rgba($color-success, 0.5),
+            rgba($color-success, 0.9)
+          ),
+          url("../assets/images/kb-w-4.jpg");
+      }
+
+      &--warrior {
+        background-image:
+          linear-gradient(
+            to right bottom,
+            rgba($color-warning, 0.5),
+            rgba($color-warning, 0.9)
+          ),
+          url("../assets/images/ma.jpg");
+      }
+
+      // @include media(lg-down) {
+      //   min-height: 300px;
+      // }
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      padding: 2rem 4rem;
+    }
+
+    &__details ul {
+      list-style: none;
+      margin: 0 auto;
+    }
+
+    &__details ul li {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+
+    &__details ul li:not(:last-child) {
+      border-bottom: 1px solid rgba(224, 224, 224, 0.55);
+    }
+
+    &__footer {
+      display: flex;
+      align-self: flex-end;
+      padding-top: 4rem;
+    }
+  }
+
+  &__description {
+    border: 1px solid rgba($color-black, 0.1);
+    padding: 2rem;
+    max-height: 37rem;
+    overflow-y: auto;
+
+    &__text {
+      padding: 0.5rem;
+    }
+
+    &__link {
+      font-size: inherit;
+      color: $color-accent-light;
+    }
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: $color-primary-dark;
+  border-radius: 50%;
+  border: 0.4rem solid $color-primary-dark;
+  z-index: 499;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: $color-primary-dark;
+}

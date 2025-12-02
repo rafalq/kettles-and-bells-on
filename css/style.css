@@ -205,7 +205,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #d6ba80, #8f7642);
+  background-image: linear-gradient(to right, #6e9ab3, #2f4f4f);
   background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
@@ -222,6 +222,32 @@ body {
 }
 @media (max-width: 36em) {
   .heading-secondary {
+    font-size: 2rem;
+  }
+}
+
+.heading-secondary--accent {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #d6ba80, #8f7642);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+}
+@media (max-width: 62em) {
+  .heading-secondary--accent {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 48em) {
+  .heading-secondary--accent {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 36em) {
+  .heading-secondary--accent {
     font-size: 2rem;
   }
 }
@@ -1026,6 +1052,20 @@ body {
   margin-bottom: 20rem;
 }
 
+::-webkit-scrollbar {
+  width: 0.3rem;
+  text-align: left;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(110, 154, 179, 0.8);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f4f4f;
+}
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -1707,7 +1747,7 @@ body {
   top: 5rem;
   right: 5rem;
   border-radius: 50%;
-  z-index: 200;
+  z-index: 502;
   box-shadow: 0 0.5rem 1rem -0.2rem rgba(0, 0, 0, 0.25);
   text-align: center;
   cursor: pointer;
@@ -1742,7 +1782,7 @@ body {
   top: 5.5rem;
   right: 5.5rem;
   background-image: radial-gradient(#6e9ab3, #2f4f4f);
-  z-index: 100;
+  z-index: 500;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 @media (max-width: 62em) {
@@ -1773,7 +1813,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 150;
+  z-index: 501;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -1785,6 +1825,10 @@ body {
   list-style: none;
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .navigation__item {
   margin: 1rem;
@@ -2246,6 +2290,157 @@ body {
 
 .swing-element.animate {
   animation: swing 3s ease-in-out forwards;
+}
+
+.courses-page__input {
+  color: #3e3e3e;
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  scale: 1;
+  transition: all 0.3s;
+}
+.courses-page__input:focus {
+  scale: 1.05;
+  outline: none;
+  box-shadow: 0 1rem 2rem -0.2rem rgba(255, 255, 255, 0.25);
+  border-bottom: 0.45rem solid #3a7ca5;
+}
+.courses-page__input:focus:invalid {
+  border-bottom: 0.45rem solid #c94c4c;
+}
+.courses-page__input:focus:valid {
+  border-bottom: 0.45rem solid #3c9a5f;
+}
+.courses-page__input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.courses-page__input:placeholder-shown + .courses-page__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.courses-page__label {
+  color: #dadada;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+  display: block;
+  transition: all 0.3s;
+}
+.courses-page__section-courses {
+  padding: 20rem 5rem;
+  margin-top: -10vh;
+  height: 100%;
+}
+@media (max-width: 62em) {
+  .courses-page__section-courses {
+    padding: 15rem 20rem;
+    margin-top: -10vh;
+  }
+}
+@media (max-width: 48em) {
+  .courses-page__section-courses {
+    padding: 10rem 10rem;
+    margin-top: -10vh;
+  }
+}
+@media (max-width: 36em) {
+  .courses-page__section-courses {
+    padding: 10rem 5rem;
+    margin-top: -10vh;
+  }
+}
+.courses-page__card {
+  width: 90%;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem -0.2rem rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.courses-page__card--left {
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  min-height: 500px;
+}
+.courses-page__card--left--sfg-1 {
+  background-image: linear-gradient(to right bottom, #6e9ab3, #2f4f4f), url("../assets/images/sfg.jpg");
+}
+.courses-page__card--left--sfg-2 {
+  background-image: linear-gradient(to right bottom, #d6ba80, #8f7642), url("../assets/images/sfg.jpg");
+}
+.courses-page__card--left--rkc {
+  background-image: linear-gradient(to right bottom, rgba(201, 76, 76, 0.5), rgba(201, 76, 76, 0.9)), url("../assets/images/sfg.jpg");
+}
+.courses-page__card--left--senior {
+  background-image: linear-gradient(to right bottom, rgba(58, 124, 165, 0.5), rgba(58, 124, 165, 0.9)), url("../assets/images/seniors.jpg");
+}
+.courses-page__card--left--women {
+  background-image: linear-gradient(to right bottom, rgba(60, 154, 95, 0.5), rgba(60, 154, 95, 0.9)), url("../assets/images/kb-w-4.jpg");
+}
+.courses-page__card--left--warrior {
+  background-image: linear-gradient(to right bottom, rgba(181, 145, 62, 0.5), rgba(181, 145, 62, 0.9)), url("../assets/images/ma.jpg");
+}
+.courses-page__card--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 2rem 4rem;
+}
+.courses-page__card__details ul {
+  list-style: none;
+  margin: 0 auto;
+}
+.courses-page__card__details ul li {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.courses-page__card__details ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(224, 224, 224, 0.55);
+}
+.courses-page__card__footer {
+  display: flex;
+  align-self: flex-end;
+  padding-top: 4rem;
+}
+.courses-page__description {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-height: 37rem;
+  overflow-y: auto;
+}
+.courses-page__description__text {
+  padding: 0.5rem;
+}
+.courses-page__description__link {
+  font-size: inherit;
+  color: #d6ba80;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #2f4f4f;
+  border-radius: 50%;
+  border: 0.4rem solid #2f4f4f;
+  z-index: 499;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #2f4f4f;
 }
 
 /*# sourceMappingURL=style.css.map */

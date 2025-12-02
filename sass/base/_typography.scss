@@ -68,6 +68,33 @@ body {
   display: inline-block;
   background-image: linear-gradient(
     to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+
+  @include media(md) {
+    font-size: 3rem;
+  }
+
+  @include media(sm) {
+    font-size: 2.5rem;
+  }
+
+  @include media(xs) {
+    font-size: 2rem;
+  }
+}
+
+.heading-secondary--accent {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
     $color-accent-light,
     $color-accent-dark
   );

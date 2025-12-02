@@ -187,3 +187,20 @@
     margin-bottom: #{$i}rem;
   }
 }
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  text-align: left;
+
+  &-track {
+    background: #f1f1f1;
+  }
+
+  &-thumb {
+    background: rgba($color-primary-light, 0.8);
+
+    &:hover {
+      background: $color-primary-dark;
+    }
+  }
+}

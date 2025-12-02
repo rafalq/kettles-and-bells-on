@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+    />
+
+    <!-- <link rel="stylesheet" href="css/bootstrap-grid.css" /> -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/icon-font.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="assets/images/favicon-48x48.png"
+    />
+
+    <title>Kettles & Bells On</title>
+
+    <script src="./js/bootstrap.bundle.min.js" defer></script>
+
+    <script type="module" src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="navigation__button"
+        ><span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="./index.html" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./courses.html" class="navigation__link">Courses</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./login.html" class="navigation__link">Log In</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__logo-box">
+      <a href="./index.html">
+        <img src="./assets/images/logo.png" alt="Logo" class="header__logo" />
+      </a>
+    </div>
+
+    <main class="courses-page">
+      <section class="courses-page__section-courses">
+        <div class="text-center">
+          <h2 class="heading-secondary mb-xl">Our Courses</h2>
+        </div>
+        <!-- SEARCH INPUT -->
+        <!--
+        <div class="row justify-content-center mb-xl">
+          <div class="col-6">
+            <input
+              id="name"
+              type="text"
+              class="courses-page__input"
+              placeholder="Search"
+              required
+            />
+            <label for="name" class="courses-page__label">Searching...</label>
+          </div>
+        </div>
+        -->
+        <div>
+          <div
+            style="text-align: start; margin-left: 6rem; margin-bottom: 3rem"
+          >
+            <h3 class="heading-tertiary--primary">Certification Preparation</h3>
+          </div>
+          <div
+            id="coursesCertPrepCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#coursesCertPrepCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#coursesCertPrepCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#coursesCertPrepCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="courses-page__card">
+                  <div class="row g-0">
+                    <div
+                      class="col-lg-5 courses-page__card--left courses-page__card--left--sfg-1"
+                    ></div>
+
+                    <div class="col-lg-7 courses-page__card--right">
+                      <h2 class="heading-secondary--accent">SFG I</h2>
+
+                      <div class="row gx-5 mt-4">
+                        <div class="courses-page__card__details col-5">
+                          <ul>
+                            <li>4 week intensive course</li>
+                            <li>Max 10 participants</li>
+                            <li>2 classes per week</li>
+                            <li>Guided by SFG-certified instructors</li>
+                            <li>Difficulty: all levels (with ambition!)</li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="courses-page__description">
+                            <p class="courses-page__description__text">
+                              This intensive 4-week program is specifically
+                              designed to prepare you for the world-renowned
+                              <strong
+                                >StrongFirst SFG Level I Kettlebell Instructor
+                                Certification</strong
+                              >.
+                            </p>
+                            <p class="courses-page__description__text">
+                              You will master the six fundamental movements
+                              (Swing, Get-up, Clean, Press, Squat, Snatch) to
+                              the exact StrongFirst technical standards, build
+                              the necessary strength-endurance, and learn how to
+                              teach these movements safely and effectively to
+                              others.
+                            </p>
+                            <p class="courses-page__description__text">
+                              Whether your goal is to pass the SFG I
+                              certification on your first attempt or simply take
+                              your personal kettlebell practice to an elite
+                              level – this course is your fastest, most reliable
+                              path to success.
+                            </p>
+                            <p class="courses-page__description__text mt-3">
+                              <strong
+                                >Official SFG I requirements &amp;
+                                standards:</strong
+                              ><br />
+                              <a
+                                href="https://www.strongfirst.com/certifications/sfg-i-requirements/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="courses-page__description__link btn-link"
+                              >
+                                → strongfirst.com/sfg-i-requirements
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="courses-page__card__footer mt-auto">
+                        <a
+                          href="#section-contact"
+                          class="btn btn--primary btn--animated"
+                        >
+                          Book Your Spot Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="courses-page__card">
+                  <div class="row g-0">
+                    <div
+                      class="col-lg-5 courses-page__card--left courses-page__card--left--sfg-2"
+                    ></div>
+
+                    <div class="col-lg-7 courses-page__card--right">
+                      <h2 class="heading-secondary--accent">SFG II</h2>
+
+                      <div class="row gx-5 mt-4">
+                        <div class="courses-page__card__details col-5">
+                          <ul>
+                            <li>6 week advanced course</li>
+                            <li>Max 8 participants</li>
+                            <li>3 classes per week</li>
+                            <li>Guided by SFG II-certified instructors</li>
+                            <li>
+                              Difficulty: SFG I required + serious ambition
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="courses-page__description">
+                            <p class="courses-page__description__text">
+                              This rigorous 6-week program is designed for
+                              certified SFG Level I instructors and serious
+                              athletes ready to pursue the prestigious
+                              StrongFirst SFG Level II Certification.
+                            </p>
+                            <p class="courses-page__description__text">
+                              You will refine your technique to
+                              competition-grade precision, master advanced
+                              variations and progressions, develop elite-level
+                              strength-endurance, and deepen your coaching
+                              ability through hands-on practice and detailed
+                              movement analysis.
+                            </p>
+                            <p class="courses-page__description__text">
+                              This course demands dedication, discipline, and a
+                              genuine commitment to the StrongFirst methodology.
+                              You'll train alongside like-minded professionals
+                              under the guidance of SFG II-certified instructors
+                              who will push you beyond your current limits and
+                              prepare you for one of the most demanding
+                              certifications in the strength world.
+                            </p>
+                            <p class="courses-page__description__text mt-3">
+                              If you're ready to join the ranks of elite
+                              kettlebell instructors and take your practice to
+                              the absolute highest level – this is your next
+                              step.
+                              <strong
+                                >Official SFG I requirements &amp;
+                                standards:</strong
+                              ><br />
+                              <a
+                                href="https://www.strongfirst.com/certifications/sfg-ii-kettlebell-instructor-information/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="courses-page__description__link btn-link"
+                              >
+                                → strongfirst.com/sfg-ii-requirements
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="courses-page__card__footer mt-auto">
+                        <a
+                          href="#section-contact"
+                          class="btn btn--primary btn--animated"
+                        >
+                          Book Your Spot Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="courses-page__card">
+                  <div class="row g-0">
+                    <div
+                      class="col-lg-5 courses-page__card--left courses-page__card--left--rkc"
+                    ></div>
+
+                    <div class="col-lg-7 courses-page__card--right">
+                      <h2 class="heading-secondary--accent">RKC</h2>
+
+                      <div class="row gx-5 mt-4">
+                        <div class="courses-page__card__details col-5">
+                          <ul>
+                            <li>3-day intensive workshop (Fri–Sun)</li>
+                            <li>Max 20–24 participants</li>
+                            <li>Full-day training + testing on Sunday</li>
+                            <li>Guided by RKC-certified instructors</li>
+                            <li>
+                              Difficulty: intermediate–advanced (prior
+                              kettlebell experience required)
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="courses-page__description">
+                            <p class="courses-page__description__text">
+                              This focused 3-day RKC (Russian Kettlebell
+                              Challenge) workshop is designed for intermediate
+                              to advanced trainees who want to test their
+                              skills, earn their RKC certification, or simply
+                              experience the legendary intensity of old-school
+                              kettlebell training.
+                            </p>
+                            <p class="courses-page__description__text">
+                              Over Friday, Saturday, and Sunday, you'll drill
+                              the core RKC movements with uncompromising
+                              attention to technique, build serious work
+                              capacity, and push your mental and physical limits
+                              in a supportive yet demanding environment.
+                            </p>
+                            <p class="courses-page__description__text">
+                              Sunday concludes with an official testing session
+                              where you'll demonstrate your mastery of the
+                              fundamentals under pressure. Whether you're
+                              pursuing RKC certification or simply want to prove
+                              what you're capable of, this workshop will
+                              challenge you like nothing else.
+                            </p>
+                            <p class="courses-page__description__text mt-3">
+                              Expect high volume, high intensity, and high
+                              standards. Come prepared to work hard, learn fast,
+                              and leave stronger than you arrived.
+                              <a
+                                href="https://dragondoor.com/products/rkc-certification-workshops-event-placeholders?srsltid=AfmBOopXmt0TqV9BuhoDc1T48k1gC5VOrcbmfnkyv3nyfntKIHesd7FF"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="courses-page__description__link btn-link"
+                              >
+                                → dragondoor.com/rkc-certification
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="courses-page__card__footer mt-auto">
+                        <a
+                          href="#section-contact"
+                          class="btn btn--primary btn--animated"
+                        >
+                          Book Your Spot Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#coursesCertPrepCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#coursesCertPrepCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div
+            style="
+              text-align: start;
+              margin-left: 6rem;
+              margin-bottom: 3rem;
+              margin-top: 14rem;
+            "
+          >
+            <h3 class="heading-tertiary--primary">Specialized Programs</h3>
+          </div>
+          <div
+            id="coursesSpecCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#coursesSpecCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#coursesSpecCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#coursesSpecCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="courses-page__card">
+                  <div class="row g-0">
+                    <div
+                      class="col-lg-5 courses-page__card--left courses-page__card--left--senior"
+                    ></div>
+
+                    <div class="col-lg-7 courses-page__card--right">
+                      <h2 class="heading-secondary--accent">Senior Program</h2>
+
+                      <div class="row gx-5 mt-4">
+                        <div class="courses-page__card__details col-5">
+                          <ul>
+                            <li>8 week course</li>
+                            <li>Up to 6 participants</li>
+                            <li>2 gentle classes per week</li>
+                            <li>
+                              Guided by SFG certified Instructors with senior
+                              expertise
+                            </li>
+                            <li>Difficulty: beginner, adapted for 55+</li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="courses-page__description">
+                            <p class="courses-page__description__text">
+                              This thoughtfully designed 8-week program brings
+                              the proven benefits of kettlebell training to
+                              adults 55 and older in a safe, supportive, and
+                              age-appropriate environment.
+                            </p>
+                            <p class="courses-page__description__text">
+                              You'll build functional strength for daily
+                              activities, improve balance and mobility, increase
+                              bone density, and enhance overall quality of
+                              life—all through carefully adapted kettlebell
+                              movements that respect your body's needs and
+                              capabilities.
+                            </p>
+                            <p class="courses-page__description__text">
+                              Our SFG-certified instructors have specialized
+                              experience working with senior athletes and
+                              understand how to progress each individual at the
+                              right pace. Classes are small (max 6
+                              participants), allowing for personalized attention
+                              and modifications as needed.
+                            </p>
+                            <p class="courses-page__description__text mt-3">
+                              Whether you're completely new to strength training
+                              or looking to maintain your vitality and
+                              independence as you age, this program will help
+                              you move better, feel stronger, and stay active
+                              for years to come.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="courses-page__card__footer mt-auto">
+                        <a
+                          href="#section-contact"
+                          class="btn btn--primary btn--animated"
+                        >
+                          Book Your Spot Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="courses-page__card">
+                  <div class="row g-0">
+                    <div
+                      class="col-lg-5 courses-page__card--left courses-page__card--left--women"
+                    ></div>
+
+                    <div class="col-lg-7 courses-page__card--right">
+                      <h2 class="heading-secondary--accent">Women Program</h2>
+
+                      <div class="row gx-5 mt-4">
+                        <div class="courses-page__card__details col-5">
+                          <ul>
+                            <li>6 week empowerment course</li>
+                            <li>Up to 10 participants</li>
+                            <li>2 classes per week</li>
+                            <li>Guided by female SFG-certified instructors</li>
+                            <li>Difficulty: beginner to intermediate</li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="courses-page__description">
+                            <p class="courses-page__description__text">
+                              This empowering 6-week program is designed
+                              specifically for women who want to discover their
+                              true strength in a supportive, judgment-free
+                              environment.
+                            </p>
+                            <p class="courses-page__description__text">
+                              You'll learn proper kettlebell technique from the
+                              ground up, build lean muscle and functional
+                              strength, boost metabolism and bone density, and
+                              develop confidence that extends far beyond the
+                              gym. No prior experience needed—just a willingness
+                              to challenge yourself.
+                            </p>
+                            <p class="courses-page__description__text">
+                              Our female SFG-certified instructors understand
+                              the unique considerations of training women's
+                              bodies and create a space where you can focus on
+                              getting stronger without intimidation or
+                              comparison.
+                            </p>
+                            <p class="courses-page__description__text mt-3">
+                              Whether your goal is fat loss, athletic
+                              performance, postpartum recovery, or simply
+                              feeling powerful and capable in your own skin—this
+                              program will transform not just how you look, but
+                              how you move through the world. Strong women
+                              aren't born. They're built. One rep at a time.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="courses-page__card__footer mt-auto">
+                        <a
+                          href="#section-contact"
+                          class="btn btn--primary btn--animated"
+                        >
+                          Book Your Spot Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="courses-page__card">
+                  <div class="row g-0">
+                    <div
+                      class="col-lg-5 courses-page__card--left courses-page__card--left--warrior"
+                    ></div>
+
+                    <div class="col-lg-7 courses-page__card--right">
+                      <h2 class="heading-secondary--accent">
+                        Warrior Kettlebell
+                      </h2>
+
+                      <div class="row gx-5 mt-4">
+                        <div class="courses-page__card__details col-5">
+                          <ul>
+                            <li>8 week combat-strength fusion</li>
+                            <li>Up to 8 fighters</li>
+                            <li>3 sessions: 2 KB + 1 striking</li>
+                            <li>Guided by SFG & certified boxing coach</li>
+                            <li>Difficulty: beginner to intermediate</li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="courses-page__description">
+                            <p class="courses-page__description__text">
+                              This unique 8-week program combines the explosive
+                              power of kettlebell training with striking
+                              fundamentals to create combat-ready strength,
+                              speed, and conditioning.
+                            </p>
+                            <p class="courses-page__description__text">
+                              You'll develop the kind of functional power that
+                              translates directly to the ring or cage: grip
+                              strength for clinching, rotational power for hooks
+                              and kicks, bulletproof core stability, and the
+                              cardiovascular capacity to maintain intensity
+                              through multiple rounds.
+                            </p>
+                            <p class="courses-page__description__text">
+                              With 2 kettlebell sessions and 1 striking-focused
+                              session per week, you'll train under the guidance
+                              of both an SFG-certified instructor and a
+                              certified boxing coach who understand how strength
+                              work and combat sports reinforce each other.
+                            </p>
+                            <p class="courses-page__description__text mt-3">
+                              This isn't bodybuilding. This is building a
+                              fighter's body—strong, explosive, and relentless.
+                              Whether you're an active competitor or a martial
+                              artist looking to add serious horsepower to your
+                              game, this program will make you a more dangerous
+                              athlete.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="courses-page__card__footer mt-auto">
+                        <a
+                          href="#section-contact"
+                          class="btn btn--primary btn--animated"
+                        >
+                          Book Your Spot Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#coursesSpecCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#coursesSpecCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <picture class="footer__logo">
+          <source
+            srcset="
+              ./assets/images/logo-1x.webp 1x,
+              ./assets/images/logo-2x.webp 2x,
+              ./assets/images/logo-3x.webp 3x
+            "
+            media="(max-width: 48em)"
+          />
+          <img
+            src="./assets/images/logo.png"
+            srcset="
+              ./assets/images/logo-1x.webp 1x,
+              ./assets/images/logo-2x.webp 2x,
+              ./assets/images/logo-3x.webp 3x
+            "
+            alt="Logo"
+            class="footer__logo"
+          />
+        </picture>
+      </div>
+      <div class="footer-row">
+        <div class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Gym</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Contact us</a>
+            </li>
+            <li class="footer__item">
+              <a href="./courses.html" class="footer__link">Courses</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Privacy policy</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Terms</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__copyright">
+          <p>
+            Developed by
+            <a href="#" class="footer__link">Rafal Kruszewski</a>for educational
+            purposes.
+          </p>
+          <p>Copyright &copy; by Rafal Kruszewski.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup" id="popup">
+      <div class="row popup__content">
+        <div class="col-4 popup__content--left">
+          <img
+            src="./assets/images/popup-1.jpg"
+            alt="Two kettlebells"
+            class="popup__img"
+          /><img
+            src="./assets/images/popup-2.jpg"
+            alt="An oldman with a kettlebell"
+            class="popup__img"
+          />
+        </div>
+        <div class="col-8 popup__content--right">
+          <a href="#section-courses" class="popup__close">&times;</a>
+          <h2 class="heading-secondary--accent">Start booking now</h2>
+          <h3 class="heading-tertiary--primary mt-lg">
+            Important &dash; Please read these terms before booking
+          </h3>
+          <p class="popup__text mt-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos
+            minus ex molestias. Ex saepe minima ad modi fuga facilis culpa sit
+            hic natus quibusdam minus, accusantium ab fugiat dolorum.
+          </p>
+          <div class="popup__footer mt-xl">
+            <a href="#" class="btn btn--primary">Book now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
