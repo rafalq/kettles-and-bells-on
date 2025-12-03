@@ -27,8 +27,6 @@
     <title>Kettles & Bells On</title>
 
     <script src="./js/bootstrap.bundle.min.js" defer></script>
-
-    <script type="module" src="./js/script.js" defer></script>
   </head>
   <body>
     <div class="navigation">
@@ -64,10 +62,12 @@
     <main class="courses-page">
       <section class="courses-page__section-courses">
         <div class="text-center">
-          <h2 class="heading-secondary mb-xl">Our Courses</h2>
+          <h2 class="heading-secondary--accent mb-xl">Our Courses</h2>
         </div>
+
+        <!-- TODO -->
         <!-- SEARCH INPUT -->
-        <!--
+
         <div class="row justify-content-center mb-xl">
           <div class="col-6">
             <input
@@ -80,10 +80,14 @@
             <label for="name" class="courses-page__label">Searching...</label>
           </div>
         </div>
-        -->
+
+        <!-- CERT PREP COURSES -->
+
         <div>
-          <div style="margin-left: 6rem; margin-bottom: 3rem; margin-top: 3rem">
-            <h3 class="heading-tertiary--primary">Certification Preparation</h3>
+          <div
+            style="margin-left: 6rem; margin-bottom: 3rem; margin-top: 10rem"
+          >
+            <h3 class="heading-tertiary--white">Certification Preparation</h3>
           </div>
           <div
             id="coursesCertPrepCarousel"
@@ -386,11 +390,14 @@
             </button>
           </div>
         </div>
+
+        <!-- SPECIAL COURSES -->
+
         <div>
           <div
             style="margin-left: 6rem; margin-bottom: 3rem; margin-top: 14rem"
           >
-            <h3 class="heading-tertiary--primary">Specialized Programs</h3>
+            <h3 class="heading-tertiary--white">Specialized Programs</h3>
           </div>
           <div
             id="coursesSpecCarousel"

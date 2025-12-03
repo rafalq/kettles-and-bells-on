@@ -1,6 +1,14 @@
 @use "../abstracts/" as *;
 
 .courses-page {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: linear-gradient(
+    135deg,
+    rgba($color-black, 1),
+    rgba($color-black, 0.7)
+  );
+
   &__input {
     color: $color-gray-700;
     font-size: 1.5rem;
@@ -224,5 +232,5 @@
 }
 
 .carousel-indicators [data-bs-target] {
-  background-color: $color-primary-dark;
+  background-color: $color-white;
 }

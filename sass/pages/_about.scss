@@ -1,0 +1,396 @@
+@use "../abstracts/" as *;
+
+.about-page {
+  background-color: $color-bg;
+  min-height: 100vh;
+  padding-top: 8rem;
+
+  @include media(md) {
+    padding-top: 6rem;
+  }
+
+  // HERO SECTION
+  &__hero {
+    padding: 8rem 6rem 6rem;
+    background: linear-gradient(
+      135deg,
+      rgba($color-primary-dark, 0.8),
+      rgba($color-accent-dark, 0.6)
+    );
+
+    @include media(md) {
+      padding: 6rem 4rem 4rem;
+    }
+
+    @include media(sm) {
+      padding: 4rem 2rem 3rem;
+    }
+  }
+
+  &__hero-text {
+    font-size: $text-lg;
+    color: $color-text-light;
+    max-width: 80rem;
+    margin: 0 auto;
+    line-height: 1.6;
+
+    @include media(md) {
+      font-size: $text-base;
+    }
+  }
+
+  // STORY SECTION
+  &__section-story {
+    padding: 10rem 6rem;
+
+    @include media(md) {
+      padding: 6rem 4rem;
+    }
+
+    @include media(sm) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__story-content {
+    padding-right: 4rem;
+
+    @include media(md) {
+      padding-right: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__story-image {
+    height: 50rem;
+    background-image:
+      linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.3),
+        rgba($color-primary-dark, 0.5)
+      ),
+      url(../assets/images/kb-7-1x.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.3rem;
+    box-shadow: $shadow-lg;
+
+    @include media(md) {
+      height: 40rem;
+    }
+
+    @include media(sm) {
+      height: 35rem;
+    }
+  }
+
+  // MISSION & VALUES
+  &__section-mission {
+    padding: 10rem 6rem;
+    background-color: $color-surface;
+
+    @include media(md) {
+      padding: 6rem 4rem;
+    }
+
+    @include media(sm) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__value-box {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: $color-bg;
+    border-radius: 0.3rem;
+    box-shadow: $shadow-md;
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-1rem);
+      box-shadow: $shadow-xl;
+    }
+  }
+
+  &__value-icon {
+    font-size: 6rem;
+    color: $color-accent;
+    margin-bottom: 2rem;
+
+    @include media(sm) {
+      font-size: 5rem;
+    }
+  }
+
+  // TEAM SECTION
+  &__section-team {
+    padding: 10rem 6rem;
+
+    @include media(md) {
+      padding: 6rem 4rem;
+    }
+
+    @include media(sm) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__team-intro {
+    font-size: $text-base;
+    color: $color-text;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  &__team-card {
+    background-color: $color-surface;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    box-shadow: $shadow-md;
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: $shadow-xl;
+    }
+  }
+
+  &__team-image {
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+
+    &--1 {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-accent, 0.2),
+          rgba($color-primary-dark, 0.4)
+        ),
+        url(../assets/images/kb-7-1x.webp);
+    }
+
+    &--2 {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-accent, 0.2),
+          rgba($color-primary-dark, 0.4)
+        ),
+        url(../assets/images/kb-w-3-1x.webp);
+    }
+
+    &--3 {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-accent, 0.2),
+          rgba($color-primary-dark, 0.4)
+        ),
+        url(../assets/images/kb-6-1x.webp);
+    }
+
+    @include media(sm) {
+      height: 25rem;
+    }
+  }
+
+  &__team-info {
+    padding: 3rem 2rem;
+  }
+
+  &__team-role {
+    font-size: $text-sm;
+    color: $color-accent-light;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+
+  // FACILITY SECTION
+  &__section-facility {
+    padding: 10rem 6rem;
+    background-color: $color-surface;
+
+    @include media(md) {
+      padding: 6rem 4rem;
+    }
+
+    @include media(sm) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__facility-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 25rem);
+    gap: 2rem;
+
+    @include media(md) {
+      margin-bottom: 4rem;
+    }
+
+    @include media(sm) {
+      grid-template-rows: repeat(2, 20rem);
+      gap: 1.5rem;
+    }
+  }
+
+  &__facility-image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.3rem;
+    box-shadow: $shadow-md;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $shadow-lg;
+    }
+
+    &--1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-primary-dark, 0.2),
+          rgba($color-accent-dark, 0.3)
+        ),
+        url(../assets/images/kb-6-1x.webp);
+    }
+
+    &--2 {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-primary-dark, 0.2),
+          rgba($color-accent-dark, 0.3)
+        ),
+        url(../assets/images/kb-7-1x.webp);
+    }
+
+    &--3 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-primary-dark, 0.2),
+          rgba($color-accent-dark, 0.3)
+        ),
+        url(../assets/images/kb-w-3-1x.webp);
+    }
+  }
+
+  &__facility-content {
+    padding-left: 4rem;
+
+    @include media(md) {
+      padding-left: 0;
+    }
+  }
+
+  &__facility-features {
+    list-style: none;
+    margin-top: 3rem;
+
+    li {
+      font-size: $text-base;
+      color: $color-text;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 2rem;
+        color: $color-accent;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  // CONTACT SECTION
+  &__section-contact {
+    padding: 10rem 6rem;
+
+    @include media(md) {
+      padding: 6rem 4rem;
+    }
+
+    @include media(sm) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  // INFO SECTION
+  &__section-info {
+    padding: 10rem 6rem;
+    background-color: $color-surface;
+
+    @include media(md) {
+      padding: 6rem 4rem;
+    }
+
+    @include media(sm) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__info-box {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  &__info-icon {
+    font-size: 5rem;
+    color: $color-primary-light;
+    margin-bottom: 2rem;
+
+    @include media(sm) {
+      font-size: 4rem;
+    }
+  }
+}
+
+// FORM TEXTAREA SPECIFIC STYLE
+.form__textarea {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  font-size: $text-base;
+  color: $color-white;
+  background-color: rgba($color-white, 0.05);
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0.2rem;
+  display: block;
+  transition: all 0.3s;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+    border-bottom: 3px solid $color-primary;
+  }
+
+  &:focus:invalid {
+    border-bottom: 3px solid $color-error;
+  }
+
+  &::placeholder {
+    color: $color-text;
+  }
+
+  &:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+}

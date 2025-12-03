@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+.login-page {
+  padding: 10rem 4rem;
+}
+
 .form {
   padding: 6rem 2rem 2rem 2rem;
 
@@ -26,12 +30,26 @@
       border-bottom: 0.45rem solid $color-info;
     }
 
-    &:focus:invalid {
-      border-bottom: 0.45rem solid $color-error;
+    // Invalid state - controlled by JS
+    &--invalid {
+      border-bottom: 0.45rem solid $color-error !important;
+      animation: shake 0.3s ease;
     }
 
-    &:focus:valid {
+    // Valid state - controlled by JS
+    &--valid {
+      border-bottom: 0.45rem solid $color-success !important;
+    }
+
+    // Focus states with validation
+    &:focus.form__input--invalid {
+      border-bottom: 0.45rem solid $color-error;
+      box-shadow: 0 1rem 2rem rgba($color-error, 0.2);
+    }
+
+    &:focus.form__input--valid {
       border-bottom: 0.45rem solid $color-success;
+      box-shadow: 0 1rem 2rem rgba($color-success, 0.2);
     }
 
     &::-webkit-input-placeholder {
@@ -55,85 +73,27 @@
     transition: all 0.3s;
   }
 
-  &__radio-group,
-  &__checkbox-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 3rem;
-
-    @include media(sm) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  &__radio-group__item,
-  &__checkbox-group__item {
-    display: flex;
-    justify-items: center;
-    gap: 0.5rem;
-    color: $color-gray-200;
-  }
-
-  &__radio-input,
-  &__checkbox-input {
-    display: none;
-  }
-
-  &__radio-label,
-  &__checkbox-label {
-    font-size: $text-base;
-    cursor: pointer;
-    padding-left: 4rem;
-    position: relative;
-  }
-
-  &__radio-button,
-  &__checkbox-button {
-    height: 3rem;
-    width: 3rem;
-    border: 0.5rem solid $color-accent-light;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    top: -0.35rem;
-
-    &::after {
-      content: "";
-      display: block;
-      height: 1.3rem;
-      width: 1.3rem;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: $color-accent;
-      opacity: 0;
-      transition: opacity 0.1s;
-    }
-  }
-
-  &__radio-input:checked ~ &__radio-label &__radio-button::after,
-  &__checkbox-input:checked ~ &__checkbox-label &__checkbox-button::after {
-    opacity: 1;
-  }
-
   .remember-me-box {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
+
+    @include media(sm) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
 
   .no-account-link {
     font-size: $text-base;
     opacity: 0.8;
     cursor: pointer;
+
+    @include media(sm) {
+      margin-top: 2rem;
+    }
   }
 
   .login-button-box {

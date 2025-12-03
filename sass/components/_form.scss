@@ -26,14 +26,27 @@
       border-bottom: 0.45rem solid $color-info;
     }
 
-    &:focus:invalid {
+    // Invalid state - controlled by JS
+    &--invalid {
+      border-bottom: 0.45rem solid $color-error !important;
+      animation: shake 0.3s ease;
+    }
+
+    // Valid state - controlled by JS
+    &--valid {
+      border-bottom: 0.45rem solid $color-success !important;
+    }
+
+    // Focus states with validation
+    &:focus.form__input--invalid {
       border-bottom: 0.45rem solid $color-error;
+      box-shadow: 0 1rem 2rem rgba($color-error, 0.2);
     }
 
-    &:focus:valid {
+    &:focus.form__input--valid {
       border-bottom: 0.45rem solid $color-success;
+      box-shadow: 0 1rem 2rem rgba($color-success, 0.2);
     }
-
     &::-webkit-input-placeholder {
       color: $color-gray-300;
     }
@@ -42,7 +55,7 @@
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-4rem);
+    transform: translateY(4rem);
   }
 
   &__label {
@@ -67,18 +80,21 @@
     }
   }
 
-  &__radio-group__item {
+  &__radio-group__item,
+  &__checkbox-group__item {
     display: flex;
     justify-items: center;
     gap: 0.5rem;
     color: $color-gray-200;
   }
 
-  &__radio-input {
+  &__radio-input,
+  &__checkbox-input {
     display: none;
   }
 
-  &__radio-label {
+  &__radio-label,
+  &__checkbox-label {
     font-size: $text-base;
     cursor: pointer;
     padding-left: 4rem;
@@ -114,5 +130,48 @@
 
   &__radio-input:checked ~ &__radio-label &__radio-button::after {
     opacity: 1;
+  }
+
+  &__checkbox-button {
+    height: 3rem;
+    width: 3rem;
+    border: 0.3rem solid $color-accent-light;
+    border-radius: 0.3rem; // ← KWADRAT
+    display: inline-block;
+    position: absolute;
+    top: -0.35rem;
+    left: 0;
+    transition: all 0.2s;
+
+    &::after {
+      content: "✓"; // ← PTASZEK
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 2rem;
+      font-weight: bold;
+      color: $color-accent;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+  }
+
+  &__checkbox-input:checked ~ &__checkbox-label &__checkbox-button {
+    background-color: rgba($color-accent-light, 0.1);
+
+    &::after {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__error {
+    display: inline-block;
+    background-color: $color-error;
+    color: $color-white;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    transform: translateY(-100%);
   }
 }

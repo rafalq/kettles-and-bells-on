@@ -131,6 +131,22 @@ body {
     font-size: $text-base;
     color: $color-accent;
   }
+
+  &--white {
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: $text-base;
+    color: $color-white;
+  }
+
+  &--black {
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: $text-base;
+    color: $color-black;
+  }
 }
 
 .paragraph {

@@ -28,7 +28,7 @@
 
     <script src="./js/bootstrap.bundle.min.js" defer></script>
 
-    <script type="module" src="./js/script.js" defer></script>
+    <script type="module" src="./js/pages/login/index.js" defer></script>
   </head>
   <body>
     <div class="navigation">
@@ -61,7 +61,7 @@
       </a>
     </div>
 
-    <main class="login-page pb-6">
+    <main class="login-page">
       <section class="login-page__section-login">
         <div class="contact">
           <div class="contact__form">
@@ -71,17 +71,20 @@
               </div>
               <div class="form__group mb-lg">
                 <input
-                  id="name"
+                  id="username"
+                  name="username"
                   type="text"
                   class="form__input"
-                  placeholder="Full Name"
+                  placeholder="Username"
+                  data-validate="username"
                   required
                 />
-                <label for="name" class="form__label">Full Name</label>
+                <label for="username" class="form__label">Full Name</label>
               </div>
               <div class="form__group">
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   class="form__input"
                   placeholder="Email"
@@ -97,7 +100,6 @@
                       id="remember-me"
                       type="checkbox"
                       class="form__checkbox-input"
-                      required
                     />
                     <label for="remember-me" class="form__checkbox-label">
                       <span class="form__checkbox-button"></span>
