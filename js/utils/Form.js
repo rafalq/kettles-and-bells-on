@@ -32,6 +32,14 @@ export class Form {
       onError: options.onError || null,
     };
 
+    this.options = {
+      showSuccessMessage: options.showSuccessMessage !== false, // default true
+      successMessageType: options.successMessageType || "overlay", // 'overlay' or 'toast'
+      successMessageDuration: 2000,
+      successMessage:
+        options.successMessage || "Your form has been submitted successfully.",
+    };
+
     this.formData = {};
     this.init();
   }
@@ -240,7 +248,13 @@ export class Form {
     this.saveToStorage();
 
     // Show success message
-    this.showSuccessMessage();
+    if (this.options.showSuccessMessage) {
+      if (this.options.successMessageType === "toast") {
+        this.showToast(this.options.successMessage);
+      } else {
+        this.showSuccessMessage();
+      }
+    }
 
     // Call success callback if provided
     if (this.callbacks.onSuccess) {
@@ -251,6 +265,12 @@ export class Form {
     setTimeout(() => {
       this.form.reset();
       this.clearAllErrors();
+
+      // Remove validation classes
+      this.inputs.forEach((input) => {
+        input.classList.remove("form__input--valid");
+        input.classList.remove("form__input--invalid");
+      });
     }, 2000);
   }
 
@@ -291,25 +311,33 @@ export class Form {
    * Saves form data to localStorage with timestamp
    * Keeps history of last 10 submissions
    */
-
   saveToStorage() {
     const formId = this.form.id || "form_data";
     const timestamp = new Date().toISOString();
+
+    // Check if "remember me" checkbox exists and is checked
+    const rememberMe = this.form.querySelector('input[name="remember-me"]');
+    const shouldRemember = rememberMe ? rememberMe.checked : true; // default true if no checkbox
+
     const dataToSave = {
       ...this.formData,
       submittedAt: timestamp,
     };
 
     try {
-      // Save current submission
-      localStorage.setItem(formId, JSON.stringify(dataToSave));
+      if (shouldRemember) {
+        // Save current submission
+        localStorage.setItem(formId, JSON.stringify(dataToSave));
+      } else {
+        // Clear saved data if not remembering
+        localStorage.removeItem(formId);
+      }
 
-      // Get all previous submissions
+      // Always save to history
       const allSubmissions =
         JSON.parse(localStorage.getItem(`${formId}_history`)) || [];
       allSubmissions.push(dataToSave);
 
-      // Keep only last 10 submissions
       if (allSubmissions.length > 10) {
         allSubmissions.shift();
       }
@@ -321,7 +349,7 @@ export class Form {
   }
 
   /**
-   * Loads previously saved form data from localStorage
+   * Loads previously saved form data from localStorage and auto-fills the form
    * @private
    */
   loadFromStorage() {
@@ -330,9 +358,14 @@ export class Form {
       const savedData = localStorage.getItem(formId);
       if (savedData) {
         const data = JSON.parse(savedData);
-        // Optionally populate form with saved data
-        // This is commented out as it might not be desired for all forms
-        // this.populateForm(data);
+        // Auto-populate form with saved data
+        this.populateForm(data);
+
+        // Check the "remember me" checkbox
+        const rememberMe = this.form.querySelector('input[name="remember-me"]');
+        if (rememberMe) {
+          rememberMe.checked = true;
+        }
       }
     } catch (error) {
       console.error("Error loading from localStorage:", error);
@@ -373,6 +406,24 @@ export class Form {
     setTimeout(() => {
       successOverlay.remove();
     }, 2000);
+  }
+
+  /**
+   * Displays a toast notification
+   * @param {string} title - Toast title
+   * @param {string} message - Toast message
+   * @param {string} type - Toast type (success, error, warning, info)
+   */
+  showToast(message, type = "success") {
+    if (typeof window.ToastSystem === "undefined") {
+      console.warn("Toast system not loaded, falling back to overlay");
+      this.showSuccessMessage();
+      return;
+    }
+
+    window.ToastSystem[type](message, {
+      duration: 3000,
+    });
   }
 
   /**
@@ -417,6 +468,12 @@ export class Form {
     this.form.reset();
     this.clearAllErrors();
     this.formData = {};
+
+    // Remove validation classes
+    this.inputs.forEach((input) => {
+      input.classList.remove("form__input--valid");
+      input.classList.remove("form__input--invalid");
+    });
   }
 
   /**

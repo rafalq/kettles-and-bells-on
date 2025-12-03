@@ -1,4 +1,4 @@
-import { Form } from "../../Form.js";
+import { Form } from "../../utils/Form.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("form");
@@ -8,18 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
       username: /^[a-zA-Z0-9_]{3,}$/,
     },
     errorMessages: {
-      email: "Wpisz poprawny email!",
-      required: "To pole jest wymagane!",
       username: "Username must be at least 3 characters",
     },
-    // ← NOWE! Callbacks ↓
-    onSubmit: (data) => {
-      console.log("📤 Submitting:", data);
-    },
+    // toast messages
+    successMessageType: "toast",
+    successMessage: "Logged in successfully!",
+    // Callbacks
+    // onSubmit: (data) => {
+    //   console.log("📤 Submitting:", data);
+    // },
     onSuccess: (data) => {
-      console.log("✅ Success! Data:", data);
-      // Tutaj mógłbyś np. redirect do dashboard
-      // window.location.href = '/dashboard.html';
+      // Save logged in state
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem(
+        "currentUser",
+        JSON.stringify({
+          username: data.username,
+          email: data.email,
+        }),
+      );
+
+      setTimeout(() => {
+        window.location.href = "/index.html";
+      }, 3000);
     },
     onError: (data) => {
       console.log("❌ Validation failed:", data);
