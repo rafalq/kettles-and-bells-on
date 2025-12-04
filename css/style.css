@@ -1757,7 +1757,7 @@ body {
   display: inline-block;
   background-color: #c94c4c;
   color: #fff;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 2.8rem;
   position: absolute;
   transform: translateY(-100%);
 }
@@ -3424,6 +3424,54 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.contact {
+  background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 50%, transparent 50%), url(../assets/images/kb-book-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 1rem -0.2rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+@media (max-width: 87.5em) {
+  .contact {
+    background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 65%, transparent 65%), url(../assets/images/kb-book-1.jpg);
+    background-size: cover;
+    background-position: center right;
+  }
+}
+@media (max-width: 75em) {
+  .contact {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 100%), url(../assets/images/kb-book-1.jpg);
+    background-size: cover;
+    background-position: center right;
+  }
+}
+.contact__form {
+  width: 90%;
+  padding: 4rem 6rem;
+}
+@media (max-width: 75em) {
+  .contact__form {
+    width: 100%;
+  }
+}
+@media (max-width: 48em) {
+  .contact__form {
+    padding: 4rem;
+  }
+}
+@media (max-width: 36em) {
+  .contact__form {
+    padding: 3rem;
+  }
+}
+@media (max-width: 26.5em) {
+  .contact__form {
+    padding: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

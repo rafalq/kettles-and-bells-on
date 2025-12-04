@@ -25,12 +25,6 @@
     />
 
     <title>Kettles & Bells On</title>
-
-    <script src="./js/vendor/bootstrap.bundle.min.js" defer></script>
-
-    <script type="module" src="./js/main.js" defer></script>
-    <script src="./js/utils/toast.js" defer></script>
-    <script type="module" src="./js/pages/register/index.js" defer></script>
   </head>
   <body>
     <div class="navigation">
@@ -57,13 +51,15 @@
       </nav>
     </div>
 
-    <div class="header__logo-box">
-      <a href="./index.html">
-        <img src="./assets/images/logo.png" alt="Logo" class="header__logo" />
-      </a>
-    </div>
+    <header>
+      <div class="header__logo-box">
+        <a href="./index.html">
+          <img src="./assets/images/logo.png" alt="Logo" class="header__logo" />
+        </a>
+      </div>
+    </header>
 
-    <main class="auth-page">
+    <main class="auth-page mb-lg">
       <section class="auth-page__section-register">
         <form action="#" class="form">
           <div class="text-center mb-md">
@@ -202,35 +198,11 @@
       </div>
     </footer>
 
-    <div class="popup" id="popup">
-      <div class="row popup__content">
-        <div class="col-4 popup__content--left">
-          <img
-            src="./assets/images/popup-1.jpg"
-            alt="Two kettlebells"
-            class="popup__img"
-          /><img
-            src="./assets/images/popup-2.jpg"
-            alt="An oldman with a kettlebell"
-            class="popup__img"
-          />
-        </div>
-        <div class="col-8 popup__content--right">
-          <a href="#section-courses" class="popup__close">&times;</a>
-          <h2 class="heading-secondary--accent">Start booking now</h2>
-          <h3 class="heading-tertiary--primary mt-lg">
-            Important &dash; Please read these terms before booking
-          </h3>
-          <p class="popup__text mt-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos
-            minus ex molestias. Ex saepe minima ad modi fuga facilis culpa sit
-            hic natus quibusdam minus, accusantium ab fugiat dolorum.
-          </p>
-          <div class="popup__footer mt-xl">
-            <a href="#" class="btn btn--primary">Book now</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- bootstrap js -->
+    <script src="./js/vendor/bootstrap.bundle.min.js"></script>
+    <!-- custom js -->
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/utils/toast.js"></script>
+    <script type="module" src="./js/pages/register/index.js"></script>
   </body>
 </html>
