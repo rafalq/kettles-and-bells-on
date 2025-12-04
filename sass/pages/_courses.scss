@@ -1,13 +1,20 @@
 @use "../abstracts/" as *;
 
 .courses-page {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background: linear-gradient(
-    135deg,
-    rgba($color-black, 1),
-    rgba($color-black, 0.7)
-  );
+  min-height: 100vh;
+  padding-top: 8rem;
+
+  @include media(md) {
+    padding-top: 6rem;
+  }
+
+  .hero-courses {
+    @include hero-background("courses");
+
+    &__text {
+      @include hero-text;
+    }
+  }
 
   &__input {
     color: $color-gray-700;

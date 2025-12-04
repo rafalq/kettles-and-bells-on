@@ -118,3 +118,59 @@
     }
   }
 }
+
+@mixin hero-background(
+  $image-name,
+  $overlay-opacity: 0.75,
+  $overlay-opacity-hidpi: 0.85
+) {
+  padding: 8rem 6rem 6rem;
+  height: 65vh;
+  background-image:
+    linear-gradient(
+      to right bottom,
+      rgba(10, 13, 16, $overlay-opacity),
+      rgba(19, 24, 28, $overlay-opacity)
+    ),
+    url(../assets/images/hero-#{$image-name}.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: $color-primary;
+  z-index: 10;
+
+  // HiDPI / big screens – better quality + darker overlay
+  @media (min-resolution: 192dpi) and (min-width: 48em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em),
+    (min-width: 125em) {
+    background-image:
+      linear-gradient(
+        to right bottom,
+        rgba(10, 13, 16, $overlay-opacity-hidpi),
+        rgba(19, 24, 28, $overlay-opacity-hidpi)
+      ),
+      url(../assets/images/hero-#{$image-name}.jpg);
+  }
+
+  @include media(md) {
+    padding: 6rem 4rem 4rem;
+  }
+
+  @include media(sm) {
+    padding: 4rem 2rem 3rem;
+  }
+}
+
+// shared style
+@mixin hero-text {
+  font-size: $text-lg;
+  color: $color-white;
+  max-width: 80rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0.2rem;
+
+  @include media(md) {
+    font-size: $text-base;
+  }
+}

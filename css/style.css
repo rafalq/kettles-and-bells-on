@@ -2134,6 +2134,45 @@ body {
     transform: rotate(360deg);
   }
 }
+.hero {
+  padding: 8rem 6rem 6rem;
+  height: 65vh;
+  background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.75), rgba(19, 24, 28, 0.75)), url(../assets/images/hero-about.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #4a708b;
+  z-index: 10;
+}
+@media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ration: 2) and (min-width: 48em), (min-width: 125em) {
+  .hero {
+    background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-about.jpg);
+  }
+}
+@media (max-width: 62em) {
+  .hero {
+    padding: 6rem 4rem 4rem;
+  }
+}
+@media (max-width: 48em) {
+  .hero {
+    padding: 4rem 2rem 3rem;
+  }
+}
+.hero__text {
+  font-size: 2.8rem;
+  color: #fff;
+  max-width: 80rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0.2rem;
+}
+@media (max-width: 62em) {
+  .hero__text {
+    font-size: 1.6rem;
+  }
+}
+
 .navigation__checkbox {
   display: none;
 }
@@ -2508,54 +2547,6 @@ body {
   border-top: 1px solid #999;
 }
 
-.contact {
-  background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 50%, transparent 50%), url(../assets/images/kb-book-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center right;
-  border-radius: 0.3rem;
-  box-shadow: 0 0.5rem 1rem -0.2rem rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-@media (max-width: 87.5em) {
-  .contact {
-    background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 65%, transparent 65%), url(../assets/images/kb-book-1.jpg);
-    background-size: cover;
-    background-position: center right;
-  }
-}
-@media (max-width: 75em) {
-  .contact {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 100%), url(../assets/images/kb-book-1.jpg);
-    background-size: cover;
-    background-position: center right;
-  }
-}
-.contact__form {
-  width: 90%;
-  padding: 4rem 6rem;
-}
-@media (max-width: 75em) {
-  .contact__form {
-    width: 100%;
-  }
-}
-@media (max-width: 48em) {
-  .contact__form {
-    padding: 4rem;
-  }
-}
-@media (max-width: 36em) {
-  .contact__form {
-    padding: 3rem;
-  }
-}
-@media (max-width: 26.5em) {
-  .contact__form {
-    padding: 2rem;
-  }
-}
-
 .section-about {
   padding: 20rem 20rem;
   margin-top: -10vh;
@@ -2687,9 +2678,51 @@ body {
 }
 
 .courses-page {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background: linear-gradient(135deg, black, rgba(0, 0, 0, 0.7));
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+@media (max-width: 62em) {
+  .courses-page {
+    padding-top: 6rem;
+  }
+}
+.courses-page .hero-courses {
+  padding: 8rem 6rem 6rem;
+  height: 65vh;
+  background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.75), rgba(19, 24, 28, 0.75)), url(../assets/images/hero-courses.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #4a708b;
+  z-index: 10;
+}
+@media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-width: 125em) {
+  .courses-page .hero-courses {
+    background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-courses.jpg);
+  }
+}
+@media (max-width: 62em) {
+  .courses-page .hero-courses {
+    padding: 6rem 4rem 4rem;
+  }
+}
+@media (max-width: 48em) {
+  .courses-page .hero-courses {
+    padding: 4rem 2rem 3rem;
+  }
+}
+.courses-page .hero-courses__text {
+  font-size: 2.8rem;
+  color: #fff;
+  max-width: 80rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0.2rem;
+}
+@media (max-width: 62em) {
+  .courses-page .hero-courses__text {
+    font-size: 1.6rem;
+  }
 }
 .courses-page__input {
   color: #3e3e3e;
@@ -3013,7 +3046,7 @@ body {
     padding-top: 6rem;
   }
 }
-.about-page__hero {
+.about-page .hero-about {
   padding: 8rem 6rem 6rem;
   height: 65vh;
   background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.75), rgba(19, 24, 28, 0.75)), url(../assets/images/hero-about.jpg);
@@ -3023,22 +3056,22 @@ body {
   color: #4a708b;
   z-index: 10;
 }
-@media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ration: 2) and (min-width: 48em), (min-width: 125em) {
-  .about-page__hero {
+@media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-width: 125em) {
+  .about-page .hero-about {
     background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-about.jpg);
   }
 }
 @media (max-width: 62em) {
-  .about-page__hero {
+  .about-page .hero-about {
     padding: 6rem 4rem 4rem;
   }
 }
 @media (max-width: 48em) {
-  .about-page__hero {
+  .about-page .hero-about {
     padding: 4rem 2rem 3rem;
   }
 }
-.about-page__hero-text {
+.about-page .hero-about__text {
   font-size: 2.8rem;
   color: #fff;
   max-width: 80rem;
@@ -3047,7 +3080,7 @@ body {
   letter-spacing: 0.2rem;
 }
 @media (max-width: 62em) {
-  .about-page__hero-text {
+  .about-page .hero-about__text {
     font-size: 1.6rem;
   }
 }
