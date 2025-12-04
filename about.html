@@ -9,8 +9,6 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
     />
 
-    <!-- <link rel="stylesheet" href="css/bootstrap-grid.css" /> -->
-
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="css/icon-font.css" />
@@ -26,9 +24,9 @@
 
     <title>Kettles & Bells On</title>
 
-    <script src="./js/bootstrap.bundle.min.js" defer></script>
-
+    <script src="./js/utils/toast.js" defer></script>
     <script type="module" src="./js/main.js" defer></script>
+    <script type="module" src="./js/pages/about/index.js" defer></script>
   </head>
   <body>
     <div class="navigation">
@@ -66,7 +64,7 @@
 
       <section class="about-page__hero">
         <div class="text-center">
-          <h1 class="heading-secondary mb-2xl">About Us</h1>
+          <h1 class="heading-secondary--accent mb-2xl">About Us</h1>
           <p class="about-page__hero-text">
             Building strength, character, and community through the ancient art
             of kettlebell training
@@ -80,8 +78,8 @@
         <div class="row gy-5 gy-md-0">
           <div class="col-12 col-md-6">
             <div class="about-page__story-content">
-              <h2 class="heading-secondary--accent mb-xl">Our Story</h2>
-              <h3 class="heading-tertiary--primary mb-sm">
+              <h2 class="heading-secondary mb-xl">🪶 Our Story</h2>
+              <h3 class="heading-tertiary--accent mb-lg">
                 From Passion to Purpose
               </h3>
               <p class="paragraph">
@@ -110,7 +108,9 @@
 
       <section class="about-page__section-mission">
         <div class="text-center mb-4xl">
-          <h2 class="heading-secondary mb-2xl">Our Mission & Values</h2>
+          <h2 class="heading-secondary--accent mb-2xl">
+            Our Mission & Values 📜
+          </h2>
         </div>
         <div class="row gx-5 gy-5 gy-lg-0">
           <div class="col-12 col-lg-4">
@@ -153,10 +153,10 @@
 
       <section class="about-page__section-team">
         <div class="text-center mb-4xl">
-          <h2 class="heading-secondary--accent mb-2xl">Meet Our Team</h2>
+          <h2 class="heading-secondary--accent mb-2xl">👋 Meet Our Team</h2>
           <p class="about-page__team-intro">
             StrongFirst certified instructors with decades of combined
-            experience
+            experience!
           </p>
         </div>
         <div class="row gx-5 gy-5">
@@ -234,8 +234,8 @@
           </div>
           <div class="col-12 col-md-6">
             <div class="about-page__facility-content">
-              <h2 class="heading-secondary mb-xl">Our Facility</h2>
-              <h3 class="heading-tertiary--primary mb-md">
+              <h2 class="heading-secondary--accent mb-xl">Our Facility 🌐</h2>
+              <h3 class="heading-tertiary--primary mb-lg">
                 Purpose-Built for Strength
               </h3>
               <p class="paragraph">
@@ -246,23 +246,23 @@
               </p>
               <ul class="about-page__facility-features">
                 <li>
-                  <i class="icon-basic-elaboration-browser-check"></i>
+                  <i class="icon-basic-star"></i>
                   Competition-grade equipment
                 </li>
                 <li>
-                  <i class="icon-basic-elaboration-browser-check"></i>
+                  <i class="icon-basic-share"></i>
                   Small class sizes (max 10 per session)
                 </li>
                 <li>
-                  <i class="icon-basic-elaboration-browser-check"></i>
+                  <i class="icon-basic-signs"></i>
                   Dedicated areas for different skill levels
                 </li>
                 <li>
-                  <i class="icon-basic-elaboration-browser-check"></i>
+                  <i class="icon-basic-lock"></i>
                   Changing facilities & secure storage
                 </li>
                 <li>
-                  <i class="icon-basic-elaboration-browser-check"></i>
+                  <i class="icon-basic-map"></i>
                   Free parking & bike racks
                 </li>
               </ul>
@@ -278,8 +278,8 @@
           <div class="contact__form">
             <form action="#" class="form" id="contact-form">
               <div class="text-center mb-md">
-                <h2 class="heading-secondary--accent mb-2xl">Get In Touch</h2>
-                <p class="paragraph">
+                <h2 class="heading-secondary--accent mb-xl">Get In Touch</h2>
+                <p class="paragraph mb-xl">
                   Have questions? Ready to start your journey? Drop us a
                   message.
                 </p>
@@ -326,7 +326,9 @@
                 <label for="contact-message" class="form__label">Message</label>
               </div>
               <div class="form__group">
-                <h3 class="heading-tertiary--accent mb-md">Interested In</h3>
+                <h3 class="heading-tertiary--accent mb-lg mt-xl">
+                  Interested In
+                </h3>
                 <div class="form__checkbox-group">
                   <div class="form__checkbox-group__item">
                     <input
@@ -395,7 +397,7 @@
           <div class="col-12 col-lg-4">
             <div class="about-page__info-box">
               <i class="about-page__info-icon icon-basic-geolocalize-05"></i>
-              <h3 class="heading-tertiary--primary mb-md">Location</h3>
+              <h3 class="heading-tertiary--accent mb-md">Location</h3>
               <p class="paragraph">
                 142 Industrial Way<br />
                 Portland, OR 97213<br />
@@ -406,7 +408,7 @@
           <div class="col-12 col-lg-4">
             <div class="about-page__info-box">
               <i class="about-page__info-icon icon-basic-clock"></i>
-              <h3 class="heading-tertiary--primary mb-md">Hours</h3>
+              <h3 class="heading-tertiary--accent mb-md">Hours</h3>
               <p class="paragraph">
                 Monday - Friday: 6am - 9pm<br />
                 Saturday: 8am - 6pm<br />
@@ -417,7 +419,7 @@
           <div class="col-12 col-lg-4">
             <div class="about-page__info-box">
               <i class="about-page__info-icon icon-basic-mail"></i>
-              <h3 class="heading-tertiary--primary mb-md">Contact</h3>
+              <h3 class="heading-tertiary--accent mb-md">Contact</h3>
               <p class="paragraph">
                 Email: info@kettlesbellson.com<br />
                 Phone: (503) 555-0123<br />

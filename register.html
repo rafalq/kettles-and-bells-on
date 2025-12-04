@@ -26,9 +26,11 @@
 
     <title>Kettles & Bells On</title>
 
-    <script src="./js/bootstrap.bundle.min.js" defer></script>
+    <script src="./js/vendor/bootstrap.bundle.min.js" defer></script>
 
     <script type="module" src="./js/main.js" defer></script>
+    <script src="./js/utils/toast.js" defer></script>
+    <script type="module" src="./js/pages/register/index.js" defer></script>
   </head>
   <body>
     <div class="navigation">
@@ -61,84 +63,84 @@
       </a>
     </div>
 
-    <main class="login-page pb-6">
-      <section class="login-page__section-login">
-        <div class="contact">
-          <div class="contact__form">
-            <form action="#" class="form">
-              <div class="text-center mb-md">
-                <h2 class="heading-secondary--accent mb-2xl">Register</h2>
-              </div>
-              <div class="form__group mb-lg">
-                <input
-                  id="name"
-                  type="text"
-                  class="form__input"
-                  placeholder="Full Name"
-                  required
-                />
-                <label for="name" class="form__label">Full Name</label>
-              </div>
-              <div class="form__group">
-                <input
-                  id="email"
-                  type="email"
-                  class="form__input"
-                  placeholder="Email"
-                  required
-                />
-                <label for="email" class="form__label">Email</label>
-              </div>
-              <div class="form__group">
-                <input
-                  id="password"
-                  type="password"
-                  class="form__input"
-                  placeholder="Password"
-                  required
-                />
-                <label for="password" class="form__label">Password</label>
-              </div>
-              <div class="form__group">
-                <input
-                  id="password-confirmation"
-                  type="password"
-                  class="form__input"
-                  placeholder="Password Confirmation"
-                  required
-                />
-                <label for="password-confirmation" class="form__label"
-                  >Password Confirmation</label
-                >
-              </div>
-              <div class="remember-me-box form__group mt-4">
-                <div class="form__checkbox-group">
-                  <div class="form__checkbox-group__item">
-                    <input
-                      name="remember-me"
-                      id="remember-me"
-                      type="checkbox"
-                      class="form__checkbox-input"
-                      required
-                    />
-                    <label for="remember-me" class="form__checkbox-label">
-                      <span class="form__checkbox-button"></span>
-                      Remember me</label
-                    >
-                  </div>
-                </div>
-                <a href="./login.html" class="no-account-link btn-link-light"
-                  >Have an account? Log in here</a
-                >
-              </div>
-              <div class="login-button-box">
-                <button id="login-button" class="btn btn--white">
-                  Register &rarr;
-                </button>
-              </div>
-            </form>
+    <main class="auth-page">
+      <section class="auth-page__section-register">
+        <form action="#" class="form">
+          <div class="text-center mb-md">
+            <h2 class="heading-secondary--accent mb-2xl">Register</h2>
           </div>
-        </div>
+          <div class="form__group mb-lg">
+            <input
+              id="username"
+              name="username"
+              type="text"
+              class="form__input"
+              placeholder="Username"
+              data-validate="username"
+              required
+            />
+            <label for="username" class="form__label">Username</label>
+          </div>
+          <div class="form__group mb-lg">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form__input"
+              placeholder="Email"
+              required
+            />
+            <label for="email" class="form__label">Email</label>
+          </div>
+          <div class="form__group mb-lg">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              class="form__input"
+              placeholder="Password"
+              required
+            />
+            <label for="password" class="form__label">Password</label>
+          </div>
+          <div class="form__group">
+            <input
+              id="password-confirmation"
+              name="password-confirmation"
+              type="password"
+              class="form__input"
+              placeholder="Password Confirmation"
+              required
+            />
+            <label for="password" class="form__label"
+              >Password Confirmation</label
+            >
+          </div>
+          <div class="remember-me-box form__group mt-4">
+            <div class="form__checkbox-group">
+              <div class="form__checkbox-group__item">
+                <input
+                  name="remember-me"
+                  id="remember-me"
+                  type="checkbox"
+                  class="form__checkbox-input"
+                />
+                <label for="remember-me" class="form__checkbox-label">
+                  <span class="form__checkbox-button"></span>
+                  Remember me</label
+                >
+              </div>
+            </div>
+            <a href="./login.html" class="auth-link btn-link-light"
+              >Have an account? Log in here</a
+            >
+          </div>
+          <div class="submit-button-box">
+            <button type="submit" class="submit-button btn btn--white">
+              Register &rarr;
+            </button>
+          </div>
+        </form>
       </section>
     </main>
 

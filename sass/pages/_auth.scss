@@ -1,11 +1,71 @@
 @use "../abstracts/" as *;
 
-.login-page {
+.auth-page {
   padding: 10rem 4rem;
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba($color-black, 0.9) 0%,
+      rgba($color-black, 0.75) 50%,
+      transparent 50%
+    ),
+    url(../assets/images/kb-book-1.jpg);
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
+  border-radius: 0.3rem;
+  box-shadow: $shadow-md;
+
+  @include media(xl) {
+    background-image:
+      linear-gradient(
+        105deg,
+        rgba($color-black, 0.9) 0%,
+        rgba($color-black, 0.75) 65%,
+        transparent 65%
+      ),
+      url(../assets/images/kb-book-1.jpg);
+    background-size: cover;
+    background-position: center right;
+  }
+
+  @include media(lg) {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba($color-black, 0.9) 0%,
+        rgba($color-black, 0.75) 100%
+      ),
+      url(../assets/images/kb-book-1.jpg);
+    background-size: cover;
+    background-position: center right;
+  }
 }
 
 .form {
-  padding: 6rem 2rem 2rem 2rem;
+  width: 50%;
+  padding: 4rem 6rem;
+
+  @include media(xl) {
+    width: 65%;
+  }
+
+  @include media(lg) {
+    width: 100%;
+  }
+
+  @include media(sm) {
+    padding: 4rem;
+  }
+
+  @include media(xs) {
+    padding: 3rem;
+  }
+
+  @include media(xxs) {
+    padding: 2rem;
+  }
 
   &__input {
     color: $color-gray-700;
@@ -86,7 +146,7 @@
     }
   }
 
-  .no-account-link {
+  .auth-link {
     font-size: $text-base;
     opacity: 0.8;
     cursor: pointer;
@@ -96,13 +156,13 @@
     }
   }
 
-  .login-button-box {
+  .submit-button-box {
     width: 100%;
     display: flex;
     margin-top: 4rem;
   }
+}
 
-  #login-button {
-    margin-left: auto;
-  }
+.submit-button {
+  margin-left: auto;
 }

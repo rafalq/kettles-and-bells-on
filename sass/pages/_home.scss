@@ -10,11 +10,12 @@
     ),
     url(../assets/images/kb-book-1.jpg);
 
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
   border-radius: 0.3rem;
   box-shadow: $shadow-md;
+  overflow: hidden;
 
   @include media(xl) {
     background-image:
@@ -42,12 +43,8 @@
   }
 
   &__form {
-    width: 50%;
+    width: 90%;
     padding: 4rem 6rem;
-
-    @include media(xl) {
-      width: 65%;
-    }
 
     @include media(lg) {
       width: 100%;

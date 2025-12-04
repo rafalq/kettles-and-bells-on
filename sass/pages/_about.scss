@@ -1,7 +1,6 @@
 @use "../abstracts/" as *;
 
 .about-page {
-  background-color: $color-bg;
   min-height: 100vh;
   padding-top: 8rem;
 
@@ -12,11 +11,32 @@
   // HERO SECTION
   &__hero {
     padding: 8rem 6rem 6rem;
-    background: linear-gradient(
-      135deg,
-      rgba($color-primary-dark, 0.8),
-      rgba($color-accent-dark, 0.6)
-    );
+    height: 65vh;
+    background-image:
+      linear-gradient(
+        to right bottom,
+        rgba(10, 13, 16, 0.75),
+        rgba(19, 24, 28, 0.75)
+      ),
+      // TODO change for small
+      url(../assets/images/hero-about.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: $color-primary;
+    z-index: 10;
+
+    @media (min-resolution: 192dpi) and (min-width: 48em),
+      (-webkit-min-device-pixel-ration: 2) and (min-width: 48em),
+      (min-width: 125em) {
+      background-image:
+        linear-gradient(
+          to right bottom,
+          rgba(10, 13, 16, 0.85),
+          rgba(19, 24, 28, 0.85)
+        ),
+        url(../assets/images/hero-about.jpg);
+    }
 
     @include media(md) {
       padding: 6rem 4rem 4rem;
@@ -29,10 +49,11 @@
 
   &__hero-text {
     font-size: $text-lg;
-    color: $color-text-light;
+    color: $color-white;
     max-width: 80rem;
     margin: 0 auto;
     line-height: 1.6;
+    letter-spacing: 0.2rem;
 
     @include media(md) {
       font-size: $text-base;
@@ -69,7 +90,7 @@
         rgba($color-primary-light, 0.3),
         rgba($color-primary-dark, 0.5)
       ),
-      url(../assets/images/kb-7-1x.webp);
+      url(../assets/images/our-story-about.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 0.3rem;
@@ -137,8 +158,7 @@
   }
 
   &__team-intro {
-    font-size: $text-base;
-    color: $color-text;
+    font-size: 1.85rem;
     max-width: 60rem;
     margin: 0 auto;
   }
@@ -160,7 +180,7 @@
   &__team-image {
     height: 30rem;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 
     &--1 {
       background-image:
@@ -169,7 +189,7 @@
           rgba($color-accent, 0.2),
           rgba($color-primary-dark, 0.4)
         ),
-        url(../assets/images/kb-7-1x.webp);
+        url(../assets/images/marcus.jpg);
     }
 
     &--2 {
@@ -179,7 +199,7 @@
           rgba($color-accent, 0.2),
           rgba($color-primary-dark, 0.4)
         ),
-        url(../assets/images/kb-w-3-1x.webp);
+        url(../assets/images/ana.jpg);
     }
 
     &--3 {
@@ -189,7 +209,7 @@
           rgba($color-accent, 0.2),
           rgba($color-primary-dark, 0.4)
         ),
-        url(../assets/images/kb-6-1x.webp);
+        url(../assets/images/james.jpg);
     }
 
     @include media(sm) {
@@ -199,6 +219,10 @@
 
   &__team-info {
     padding: 3rem 2rem;
+  }
+
+  &__team-info .paragraph {
+    color: rgba($color-text-light, 0.7);
   }
 
   &__team-role {
@@ -261,7 +285,7 @@
           rgba($color-primary-dark, 0.2),
           rgba($color-accent-dark, 0.3)
         ),
-        url(../assets/images/kb-6-1x.webp);
+        url(../assets/images/kb-2.jpg);
     }
 
     &--2 {
@@ -273,7 +297,7 @@
           rgba($color-primary-dark, 0.2),
           rgba($color-accent-dark, 0.3)
         ),
-        url(../assets/images/kb-7-1x.webp);
+        url(../assets/images/gym-2.jpg);
     }
 
     &--3 {
@@ -295,6 +319,9 @@
     @include media(md) {
       padding-left: 0;
     }
+  }
+  &__facility-content .paragraph {
+    color: rgba($color-text-light, 0.7);
   }
 
   &__facility-features {
@@ -332,6 +359,7 @@
   // INFO SECTION
   &__section-info {
     padding: 10rem 6rem;
+    margin: 0 0 4rem 0;
     background-color: $color-surface;
 
     @include media(md) {
@@ -348,6 +376,10 @@
     padding: 4rem 2rem;
   }
 
+  &__info-box .paragraph {
+    color: rgba($color-text-light, 0.7);
+  }
+
   &__info-icon {
     font-size: 5rem;
     color: $color-primary-light;
@@ -359,38 +391,17 @@
   }
 }
 
-// FORM TEXTAREA SPECIFIC STYLE
-.form__textarea {
-  width: 100%;
-  padding: 1.5rem 2rem;
-  font-family: inherit;
-  font-size: $text-base;
-  color: $color-white;
-  background-color: rgba($color-white, 0.05);
-  border: none;
-  border-bottom: 3px solid transparent;
-  border-radius: 0.2rem;
-  display: block;
-  transition: all 0.3s;
-  resize: vertical;
+.about-page__section-mission .paragraph,
+.about-page__section-mission .heading-tertiary--primary {
+  color: $color-text-light;
+}
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-    border-bottom: 3px solid $color-primary;
-  }
+#contact-form .paragraph {
+  color: rgba($color-text-light, 0.85);
+}
 
-  &:focus:invalid {
-    border-bottom: 3px solid $color-error;
-  }
-
-  &::placeholder {
-    color: $color-text;
-  }
-
-  &:placeholder-shown + .form__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4rem);
-  }
+.form__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

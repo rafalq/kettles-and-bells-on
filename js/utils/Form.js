@@ -45,6 +45,56 @@ export class Form {
   }
 
   /**
+   * Initializes show/hide password toggle buttons
+   * @private
+   */
+  initPasswordToggles() {
+    const passwordInputs = this.form.querySelectorAll('input[type="password"]');
+
+    passwordInputs.forEach((input) => {
+      // Skip if toggle already exists
+      if (input.parentElement.querySelector(".form__password-toggle")) {
+        return;
+      }
+
+      // Create toggle button
+      const toggleBtn = document.createElement("button");
+      toggleBtn.type = "button";
+      toggleBtn.className = "form__password-toggle";
+      toggleBtn.setAttribute("aria-label", "Show password");
+
+      const icon = document.createElement("i");
+      icon.className = "icon-basic-eye"; // eye open
+      toggleBtn.appendChild(icon);
+
+      // Position relative for parent
+      input.parentElement.style.position = "relative";
+
+      // Insert after input
+      input.after(toggleBtn);
+
+      // Toggle handler
+      toggleBtn.addEventListener("click", () => {
+        const isPassword = input.type === "password";
+
+        // Toggle type
+        input.type = isPassword ? "text" : "password";
+
+        // Toggle icon
+        icon.className = isPassword
+          ? "icon-basic-eye-closed"
+          : "icon-basic-eye";
+
+        // Update aria-label
+        toggleBtn.setAttribute(
+          "aria-label",
+          isPassword ? "Hide password" : "Show password",
+        );
+      });
+    });
+  }
+
+  /**
    * Initializes form validation listeners and disables HTML5 validation
    * @private
    */
@@ -75,6 +125,9 @@ export class Form {
 
     // Initialize form data from localStorage if available
     this.loadFromStorage();
+
+    // Initialize password toggles
+    this.initPasswordToggles();
   }
 
   /**
@@ -241,7 +294,12 @@ export class Form {
 
     // Call custom onSubmit callback if provided
     if (this.callbacks.onSubmit) {
-      this.callbacks.onSubmit(this.formData);
+      const result = this.callbacks.onSubmit(this.formData);
+
+      // If callback returns false, stop submission
+      if (result === false) {
+        return;
+      }
     }
 
     // Save to localStorage
