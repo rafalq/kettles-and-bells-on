@@ -57,6 +57,16 @@
       content="https://kettlesandbellson.ie/assets/images/og-image.jpg"
     />
 
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="css/style.css" as="style" />
+
+    <!-- Preload fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      as="style"
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
@@ -863,12 +873,14 @@
       <div class="row popup__content">
         <div class="col-4 popup__content--left">
           <img
+            loading="lazy"
             src="./assets/images/popup-1.jpg"
-            alt="Two kettlebells"
+            alt="Kettlebells on the ground in a gym"
             class="popup__img"
           /><img
+            loading="lazy"
             src="./assets/images/popup-4.jpg"
-            alt="An oldman with a kettlebell"
+            alt="Kettlebell, medicine ball and battle rope on a wooden box"
             class="popup__img"
           />
         </div>

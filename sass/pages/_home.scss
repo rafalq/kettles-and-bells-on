@@ -94,6 +94,7 @@
 .section-stories {
   @include section-base($margin-top: 0);
   position: relative;
+  background-color: rgba($color-black, 0.8);
 
   @include media(md) {
     @include section-base($padding-y: 15rem, $padding-x: 10rem);

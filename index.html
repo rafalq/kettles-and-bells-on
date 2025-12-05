@@ -52,6 +52,16 @@
       content="https://kettlesandbellson.ie/assets/images/og-image.jpg"
     />
 
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="css/style.css" as="style" />
+
+    <!-- Preload fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      as="style"
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
@@ -201,6 +211,7 @@
           <div class="col-12 col-md-7">
             <div class="composition">
               <img
+                loading="lazy"
                 src="./assets/images/kb-6-1x.webp"
                 srcset="
                   ./assets/images/kb-6-1x.webp  800w,
@@ -212,6 +223,7 @@
               />
 
               <img
+                loading="lazy"
                 src="./assets/images/kb-7-1x.webp"
                 srcset="
                   ./assets/images/kb-7-1x.webp  800w,
@@ -223,6 +235,7 @@
               />
 
               <img
+                loading="lazy"
                 src="./assets/images/kb-w-3-1x.webp"
                 srcset="
                   ./assets/images/kb-w-3-1x.webp  800w,
@@ -435,6 +448,7 @@
           <div class="col-12 story">
             <figure class="story__shape">
               <img
+                loading="lazy"
                 class="story__image"
                 src="./assets/images/stories-old.jpg"
                 alt="Oldman with a cigarrete"
@@ -457,6 +471,7 @@
           <div class="col-12 story mt-lg">
             <figure class="story__shape">
               <img
+                loading="lazy"
                 class="story__image"
                 src="./assets/images/stories-pub.jpg"
                 alt="Irish man with a beer"
@@ -543,10 +558,12 @@
       <div class="row popup__content">
         <div class="col-4 popup__content--left">
           <img
+            loading="lazy"
             src="./assets/images/popup-1.jpg"
             alt="Two kettlebells"
             class="popup__img"
           /><img
+            loading="lazy"
             src="./assets/images/popup-4.jpg"
             alt="An oldman with a kettlebell"
             class="popup__img"
@@ -567,7 +584,7 @@
     </div>
 
     <!-- bootstrap js -->
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/vendor/bootstrap.bundle.min.js"></script>
     <!-- custom js -->
     <script src="./js/utils/toast.js"></script>
     <script type="module" src="./js/main.js"></script>
