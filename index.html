@@ -72,7 +72,50 @@
     />
 
     <title>Kettles & Bells On</title>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Kettles & Bells On",
+        "description": "Professional kettlebell training facility specializing in StrongFirst SFG certification preparation and specialized strength programs.",
+        "url": "https://kettlesandbellson.ie",
+        "telephone": "+353-1-XXX-XXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Fitness Street",
+          "addressLocality": "Dublin",
+          "addressRegion": "Leinster",
+          "postalCode": "D01 XXXX",
+          "addressCountry": "IE"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "06:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "priceRange": "€€",
+        "image": "https://kettlesandbellson.ie/assets/images/logo.png"
+      }
+    </script>
   </head>
+
   <body>
     <div class="navigation">
       <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
@@ -97,6 +140,7 @@
         </ul>
       </nav>
     </div>
+
     <header class="header">
       <div class="header__logo-box">
         <img src="assets/images/logo.png" alt="Logo" class="header__logo" />
@@ -163,7 +207,7 @@
                   ./assets/images/kb-6-2x.webp 1200w
                 "
                 sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
-                alt="A man is doing pushups with kettlebells"
+                alt="Man is doing pushups with kettlebells"
                 class="composition__photo composition__photo--p1"
               />
 
@@ -174,7 +218,7 @@
                   ./assets/images/kb-7-2x.webp 1200w
                 "
                 sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
-                alt="A man is doing kettlebell swing"
+                alt="Man is doing kettlebell swing"
                 class="composition__photo composition__photo--p2"
               />
 
@@ -259,7 +303,10 @@
         <div class="text-center mb-3xl">
           <h2 class="heading-secondary--accent mb-2xl">Most popular courses</h2>
           <div class="row justify-content-center">
-            <div class="col-12 col-lg-3 card">
+            <div
+              class="col-12 col-lg-3 card"
+              aria-label="SFG Level I Certification Course"
+            >
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--1">&nbsp;</div>
                 <h4 class="card__heading">
@@ -287,7 +334,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-3 mx-4 my-4 my-lg-0 card">
+            <div
+              class="col-12 col-lg-3 mx-4 my-4 my-lg-0 card"
+              aria-label="Senior Program Course"
+            >
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--2">&nbsp;</div>
                 <h4 class="card__heading">
@@ -317,7 +367,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-3 card">
+            <div
+              class="col-12 col-lg-3 card"
+              aria-label="Warrior Kettlebell Course"
+            >
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--3">&nbsp;</div>
                 <h4 class="card__heading">
@@ -357,13 +410,20 @@
 
       <section class="section-stories mb-xl" id="section-stories">
         <div class="bg-video">
-          <video class="bg-video__content" autoplay muted loop>
+          <video
+            class="bg-video__content"
+            autoplay
+            muted
+            loop
+            aria-label="Background video showing a man performing kettlebell swing"
+            title="Kettlebell training footage"
+          >
             <source src="./assets/videos/kb-swing-video.mp4" type="video/mp4" />
             <source
               src="./assets/videos/kb-swing-video.webm"
               type="video/webm"
             />
-            Your browser is not supported!
+            Your browser doesn't support video playback.
           </video>
         </div>
         <div class="text-center mb-xl">
@@ -384,13 +444,13 @@
             <div class="story__text">
               <h3 class="heading-tertiary mb-sm">I can walk again!</h3>
               <p>
-                After years of chronic back pain that left me hunched over and
-                reliant on a cane, the Kettlebell Senior Program changed
-                everything. The gentle yet progressive swings, Turkish get-ups,
-                and mobility drills rebuilt my strength, improved my posture,
-                and restored my confidence. Now, at 68, I stroll through the
-                park with my grandkids without a single wince—proof that it's
-                never too late to reclaim your body.
+                Years of chronic back pain left me hunched over and reliant on a
+                cane, the Kettlebell Senior Program changed everything. The
+                gentle yet progressive swings, Turkish get-ups, and mobility
+                drills rebuilt my strength, improved my posture, and restored my
+                confidence. Now, at 68, I stroll through the park with my
+                grandkids without a single wince—proof that it's never too late
+                to reclaim your body.
               </p>
             </div>
           </div>
@@ -417,10 +477,6 @@
             </div>
           </div>
         </div>
-        <!-- TODO CONTACT FORM delete if not needed -->
-        <!-- <div class="text-center mt-xl">
-          <a href="#" class="btn-link-light">Read all stories&nbsp; &#8594;</a>
-        </div> -->
       </section>
     </main>
 

@@ -10,6 +10,10 @@
   opacity: 1;
   overflow: hidden;
 
+  @include media(md) {
+    display: none; // hide on tablet/mobile
+  }
+
   &::after {
     content: "";
     position: absolute;

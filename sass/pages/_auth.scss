@@ -1,7 +1,10 @@
 @use "../abstracts/" as *;
 
 .auth-page {
-  padding: 10rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   background-image:
     linear-gradient(
       105deg,
@@ -10,12 +13,9 @@
       transparent 50%
     ),
     url(../assets/images/kb-book-1.jpg);
-
-  background-size: 100%;
+  background-size: cover; // ← ZMIEŃ z 100%
   background-repeat: no-repeat;
   background-position: center right;
-  border-radius: 0.3rem;
-  box-shadow: $shadow-md;
 
   @include media(xl) {
     background-image:
@@ -26,143 +26,97 @@
         transparent 65%
       ),
       url(../assets/images/kb-book-1.jpg);
-    background-size: cover;
-    background-position: center right;
   }
 
   @include media(lg) {
+    width: 100%;
     background-image:
       linear-gradient(
         to right,
         rgba($color-black, 0.9) 0%,
-        rgba($color-black, 0.75) 100%
+        rgba($color-black, 0.9) 100%
       ),
       url(../assets/images/kb-book-1.jpg);
-    background-size: cover;
-    background-position: center right;
-  }
-}
-
-.form {
-  width: 50%;
-  padding: 4rem 6rem;
-
-  @include media(xl) {
-    width: 65%;
   }
 
-  @include media(lg) {
-    width: 100%;
+  @include media(md) {
+    padding: 10rem 2rem;
   }
 
   @include media(sm) {
-    padding: 4rem;
+    padding: 8rem 1.5rem;
+  }
+}
+
+// Auth-specific form container
+.form--auth {
+  width: 50%;
+  padding: 4rem 6rem;
+
+  @include media(xxl) {
+    width: 45%;
+  }
+
+  @include media(xl) {
+    width: 55%;
+  }
+
+  @include media(lg) {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  @include media(md) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  @include media(sm) {
+    width: 100%;
+    padding: 4rem 8rem;
   }
 
   @include media(xs) {
-    padding: 3rem;
+    padding: 2.5rem;
   }
+}
 
-  @include media(xxs) {
-    padding: 2rem;
+.remember-me-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+
+  @include media(sm) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
   }
+}
 
-  &__input {
-    color: $color-gray-700;
-    font-size: 1.5rem;
-    font-family: inherit;
-    padding: 1.5rem 2rem;
-    border-radius: 2px;
-    background-color: $color-white;
-    border: none;
-    border-bottom: 0.45rem solid transparent;
-    display: block;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    scale: 1;
-    transition: all 0.3s;
+.auth-link {
+  font-size: $text-base;
+  color: $color-text-light;
+  opacity: 0.8;
+  transition: all 0.2s;
 
-    &:focus {
-      scale: 1.05;
-      outline: none;
-      box-shadow: $shadow-lg-light;
-      border-bottom: 0.45rem solid $color-info;
-    }
-
-    // Invalid state - controlled by JS
-    &--invalid {
-      border-bottom: 0.45rem solid $color-error !important;
-      animation: shake 0.3s ease;
-    }
-
-    // Valid state - controlled by JS
-    &--valid {
-      border-bottom: 0.45rem solid $color-success !important;
-    }
-
-    // Focus states with validation
-    &:focus.form__input--invalid {
-      border-bottom: 0.45rem solid $color-error;
-      box-shadow: 0 1rem 2rem rgba($color-error, 0.2);
-    }
-
-    &:focus.form__input--valid {
-      border-bottom: 0.45rem solid $color-success;
-      box-shadow: 0 1rem 2rem rgba($color-success, 0.2);
-    }
-
-    &::-webkit-input-placeholder {
-      color: $color-gray-300;
-    }
+  &:hover {
+    opacity: 1;
+    color: $color-accent;
   }
+}
 
-  &__input:placeholder-shown + &__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4rem);
-  }
-
-  &__label {
-    color: $color-gray-200;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 1rem;
-    margin-top: 0.4rem;
-    display: block;
-    transition: all 0.3s;
-  }
-
-  .remember-me-box {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-
-    @include media(sm) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-  }
-
-  .auth-link {
-    font-size: $text-base;
-    opacity: 0.8;
-    cursor: pointer;
-
-    @include media(sm) {
-      margin-top: 2rem;
-    }
-  }
-
-  .submit-button-box {
-    width: 100%;
-    display: flex;
-    margin-top: 4rem;
-  }
+.submit-button-box {
+  width: 100%;
+  display: flex;
+  margin-top: 4rem;
 }
 
 .submit-button {
   margin-left: auto;
+
+  @include media(xxs) {
+    width: 100%;
+  }
 }
