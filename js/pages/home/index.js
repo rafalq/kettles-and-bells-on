@@ -61,3 +61,36 @@
     }
   });
 })();
+
+/**
+ * Update header based on login status
+ */
+function updateHeaderWelcome() {
+  const headerBox = document.querySelector(".header__heading-box");
+  if (!headerBox) return;
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const joinButton = headerBox.querySelector(".btn--white");
+
+  if (!joinButton) return;
+
+  if (isLoggedIn) {
+    // User is logged in - show welcome message
+    // const currentUserData = localStorage.getItem("currentUser");
+    // const currentUser = currentUserData ? JSON.parse(currentUserData) : null;
+    // const username = currentUser?.username || "User";
+
+    // Replace button with welcome message
+    const welcomeMessage = document.createElement("div");
+    welcomeMessage.className = "header__welcome";
+    welcomeMessage.innerHTML = `
+      <p class="header__welcome-text">Welcome back!</p>
+    `;
+
+    joinButton.replaceWith(welcomeMessage);
+  }
+  // If not logged in, button stays as is
+}
+
+// Call on page load
+updateHeaderWelcome();

@@ -352,3 +352,73 @@
 .form__group:has(.form__password-toggle) .form__input {
   padding-right: 5rem; // space for icon
 }
+
+// Search highlight styling
+.search-highlight {
+  background-color: rgba(#ffeb3b, 0.6);
+  color: $color-text;
+  font-weight: 600;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+}
+
+// Hidden by search
+.search-hidden {
+  display: none !important;
+}
+
+// Courses empty state
+.courses-empty-state {
+  display: none;
+  padding: 8rem 2rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+
+  &__content {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  &__icon {
+    font-size: 8rem;
+    color: $color-gray-400;
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+  &__title {
+    font-size: $text-xl;
+    color: $color-text-light;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  &__description {
+    font-size: $text-base;
+    color: $color-gray-400;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#courseSearch {
+  &.form__input--valid,
+  &.form__input--invalid {
+    border-bottom: 0.45rem solid transparent !important;
+  }
+
+  &:focus {
+    border-bottom: 0.45rem solid $color-info !important;
+  }
+}

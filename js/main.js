@@ -51,8 +51,9 @@ function logout() {
     window.ToastSystem.info("Logged out successfully");
   }
 
-  // Redirect to login
+  // Redirect to login or reload
   setTimeout(() => {
-    window.location.href = "./login.html";
+    // window.location.href = "./login.html";
+    window.location.reload();
   }, 2000);
 }

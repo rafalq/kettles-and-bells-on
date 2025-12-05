@@ -42,32 +42,54 @@
     clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
   }
 
+  &__welcome {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem 3rem;
+    background-color: rgba($color-accent, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
+    border: 1px solid rgba($color-accent, 0.3);
+    display: inline-block;
+    animation: moveInBottom 1s ease-out 0.75s backwards;
+  }
+
+  &__welcome-text {
+    font-size: $text-base;
+    color: rgba($color-white, 0.9);
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
   &__logo-box {
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     left: 4rem;
+    z-index: 50;
 
     @include media(md) {
-      top: 1rem;
+      top: 2rem;
       right: 2rem;
     }
 
     @include media(sm) {
       height: 5rem;
       width: 5rem;
-      top: 0.5rem;
+      top: 1.5rem;
       right: 0.8rem;
     }
 
     @include media(xs) {
-      height: 4rem;
+      height: 5rem;
       width: 4rem;
       top: 0;
       right: 0.4rem;
     }
 
     @include media(xxs) {
-      height: 3rem;
+      height: 4rem;
       width: 3rem;
       right: 0.2rem;
     }

@@ -191,9 +191,12 @@
     }
 
     &__details ul li {
-      text-align: center;
       font-size: 1.2rem;
       padding: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
     }
 
     &__details ul li:not(:last-child) {
@@ -230,6 +233,23 @@
   }
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  width: 6rem;
+  height: 6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+.carousel-control-prev {
+  left: -5rem;
+}
+
+.carousel-control-next {
+  right: -5rem;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: $color-primary-dark;
@@ -239,5 +259,29 @@
 }
 
 .carousel-indicators [data-bs-target] {
-  background-color: $color-white;
+  background-color: $color-primary;
 }
+
+// // Popup open state
+// .popup--open {
+//   opacity: 1;
+//   visibility: visible;
+
+//   .popup__content {
+//     opacity: 1;
+//     transform: translate(-50%, -50%) scale(1);
+//   }
+// }
+
+// // popup must be hidden by default to enable booking logic
+// .popup {
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: all 0.3s;
+
+//   .popup__content {
+//     opacity: 0;
+//     transform: translate(-50%, -50%) scale(0.8);
+//     transition: all 0.3s;
+//   }
+// }
