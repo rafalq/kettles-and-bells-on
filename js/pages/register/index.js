@@ -1,5 +1,5 @@
 import { Form } from "../../utils/Form.js";
-import { auth } from "../../utils/auth.js"; // ← DODAJ IMPORT
+import { auth } from "../../utils/auth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.querySelector("form");
@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showSuccessMessage: false, // show custom toast
 
     onSubmit: (data) => {
-      console.log("📤 Submitting registration:", data);
-
       // Check if user already exists
       const result = auth.registerUser({
         username: data.username,
@@ -59,14 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       // Redirect to homepage
-      // setTimeout(() => {
-      //   window.location.href = "./index.html";
-      // }, 1500);
+      setTimeout(() => {
+        window.location.href = "./index.html";
+      }, 1500);
     },
     onError: (data) => {
       console.log("❌ Validation failed:", data);
     },
   });
-
-  console.log("Register form ready!");
 });
