@@ -1,8 +1,6 @@
 /**
- * ========================================
  * COURSE BOOKING FUNCTIONALITY
  * Protected booking - requires authentication
- * ========================================
  */
 
 /**

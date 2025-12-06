@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       onSuccess: (data) => {
         console.log("✅ Message sent:", data);
-        // fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
       },
       onError: (data) => {
         console.log("❌ Validation failed:", data);

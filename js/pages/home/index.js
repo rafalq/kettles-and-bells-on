@@ -75,11 +75,6 @@ function updateHeaderWelcome() {
   if (!joinButton) return;
 
   if (isLoggedIn) {
-    // User is logged in - show welcome message
-    // const currentUserData = localStorage.getItem("currentUser");
-    // const currentUser = currentUserData ? JSON.parse(currentUserData) : null;
-    // const username = currentUser?.username || "User";
-
     // Replace button with welcome message
     const welcomeMessage = document.createElement("div");
     welcomeMessage.className = "header__welcome";

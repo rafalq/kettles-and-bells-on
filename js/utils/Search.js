@@ -1,11 +1,4 @@
 /**
- * ========================================
- * GENERIC SEARCH CLASS
- * Flexible, reusable search functionality for any content structure
- * ========================================
- */
-
-/**
  * Generic Search class for filtering and highlighting content
  *
  * @class Search
