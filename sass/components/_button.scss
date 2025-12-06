@@ -90,21 +90,3 @@
 .btn-link-light {
   @include btn-link($color: $color-white, $font-size: 1.8rem);
 }
-
-// TODO delete if not needed
-// .btn-link-large {
-//   @include btn-link(
-//     $color: $color-tertiary,
-//     $font-size: 1.8rem,
-//     $underline-height: 3px,
-//     $hover-color: darken($color-tertiary, 10%)
-//   );
-// }
-
-// .btn-link-custom {
-//   @include btn-link(
-//     $color: #ff6b6b,
-//     $underline-color: #4ecdc4,
-//     $underline-height: 4px
-//   );
-// }

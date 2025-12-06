@@ -1,8 +1,5 @@
-/**
- * ========================================
+/*
  * TOAST NOTIFICATION SYSTEM
- * Generic, reusable toast notifications
- * ========================================
  */
 
 const ToastSystem = {
@@ -10,7 +7,7 @@ const ToastSystem = {
   toasts: [],
   config: {
     duration: 2500, // Default duration in ms
-    position: "bottom-right", // bottom-right, bottom-left, top-right, top-left, top-center, bottom-center
+    position: "bottom-right",
     maxToasts: 5, // Maximum number of visible toasts
     offset: "1.5rem", // Offset from screen edge
   },

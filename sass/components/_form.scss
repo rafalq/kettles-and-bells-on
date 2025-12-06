@@ -256,7 +256,6 @@
     transform: translateY(-100%);
   }
 
-  // Success overlay
   &__success-overlay {
     position: fixed;
     top: 0;
@@ -306,6 +305,7 @@
 
 // General form error (top of form)
 .form__general-error {
+  position: relative;
   background-color: rgba($color-error, 0.1);
   border-left: 4px solid $color-error;
   color: $color-error;
@@ -315,6 +315,7 @@
   font-size: $text-base;
   font-weight: 600;
   animation: slideDown 0.3s ease;
+  z-index: 2000;
 }
 
 @keyframes slideDown {
@@ -328,7 +329,6 @@
   }
 }
 
-// Password toggle button
 .form__password-toggle {
   position: absolute;
   right: 1.5rem;
@@ -364,7 +364,6 @@
   }
 }
 
-// Adjust input padding when toggle exists
 .form__group:has(.form__password-toggle) .form__input {
   padding-right: 5rem; // space for icon
 }

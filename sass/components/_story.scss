@@ -12,7 +12,6 @@
   font-size: $text-base;
   position: relative;
 
-  // ——— Desktop / tablet ———
   @include media(md) {
     width: 100%;
     padding: 5rem;

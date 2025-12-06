@@ -134,33 +134,6 @@
   }
 }
 
-// Generate margin utilities
-// @for $i from 0 through 20 {
-//   .m-#{$i} {
-//     margin: #{$i}rem;
-//   }
-//   .mt-#{$i} {
-//     margin-top: #{$i}rem;
-//   }
-//   .mr-#{$i} {
-//     margin-right: #{$i}rem;
-//   }
-//   .mb-#{$i} {
-//     margin-bottom: #{$i}rem;
-//   }
-//   .ml-#{$i} {
-//     margin-left: #{$i}rem;
-//   }
-//   .mx-#{$i} {
-//     margin-left: #{$i}rem;
-//     margin-right: #{$i}rem;
-//   }
-//   .my-#{$i} {
-//     margin-top: #{$i}rem;
-//     margin-bottom: #{$i}rem;
-//   }
-// }
-
 // Generate padding utilities
 @for $i from 0 through 20 {
   .p-#{$i} {
