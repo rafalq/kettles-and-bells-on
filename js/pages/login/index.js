@@ -1,24 +1,27 @@
 import { Form } from "../../utils/Form.js";
-import { auth } from "../../utils/auth.js"; // ← DODAJ IMPORT
+import { auth } from "../../utils/auth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("form");
 
   const form = new Form(loginForm, {
-    validationRules: {},
+    validationRules: {
+      password: {
+        pattern: /.+/, // any non-empty
+        message: "Password is required",
+      },
+    },
     errorMessages: {
       email: "Please enter a valid email address",
       required: "This field is required",
-      password: "Password is required",
     },
     successMessageType: "toast",
     successMessage: "Logged in successfully!",
-    showSuccessMessage: false, // ← ZMIEŃ na false (pokażemy własny toast)
+    showSuccessMessage: false,
 
     onSubmit: (data) => {
       console.log("📤 Submitting login:", data);
 
-      // ← DODAJ WALIDACJĘ ↓
       // Validate credentials
       const result = auth.validateLogin(data.email, data.password);
 
@@ -39,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     onSuccess: (data) => {
       console.log("✅ Login successful:", data);
 
-      // ← DODAJ WŁASNY TOAST ↓
       window.ToastSystem.success("Logged in successfully!");
 
       // Save logged in state

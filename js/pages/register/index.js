@@ -19,12 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     successMessageType: "toast",
     successMessage: "Account created successfully!",
-    showSuccessMessage: false, // ← ZMIEŃ na false (pokaż własny toast)
+    showSuccessMessage: false, // show custom toast
 
     onSubmit: (data) => {
       console.log("📤 Submitting registration:", data);
 
-      // ← DODAJ WALIDACJĘ ↓
       // Check if user already exists
       const result = auth.registerUser({
         username: data.username,
@@ -36,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // User already exists - show error toast
         window.ToastSystem.error(result.message, { duration: 4000 });
 
-        // Redirect to login after 2 seconds
-        setTimeout(() => {
-          window.location.href = "./login.html";
-        }, 2000);
+        // uncomment to redirect to login after 2 seconds
+        // setTimeout(() => {
+        //   window.location.href = "./login.html";
+        // }, 2000);
 
         return false; // Stop form submission
       }
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     onSuccess: (data) => {
       console.log("✅ Registration successful:", data);
 
-      // ← DODAJ WŁASNY TOAST ↓
       window.ToastSystem.success("Account created successfully!");
 
       // Auto login - save state
@@ -61,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       // Redirect to homepage
-      setTimeout(() => {
-        window.location.href = "./index.html";
-      }, 1500);
+      // setTimeout(() => {
+      //   window.location.href = "./index.html";
+      // }, 1500);
     },
     onError: (data) => {
       console.log("❌ Validation failed:", data);

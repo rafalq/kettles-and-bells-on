@@ -181,11 +181,14 @@ export class Form {
       }
     }
 
-    // Password validation
-    if (type === "password" && value && id === "password") {
-      if (!this.validationRules.password.test(value)) {
-        this.showError(input, this.errorMessages.password);
-        return false;
+    // Password validation - check id="password" (type might be "text" if toggle is shown)
+    if (id === "password" && value) {
+      // Check if password rule is a RegExp (not an object from login override)
+      if (this.validationRules.password instanceof RegExp) {
+        if (!this.validationRules.password.test(value)) {
+          this.showError(input, this.errorMessages.password);
+          return false;
+        }
       }
     }
 
