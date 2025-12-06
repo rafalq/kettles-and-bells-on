@@ -27,7 +27,7 @@
   }
 
   @media (min-resolution: 192dpi) and (min-width: 48em),
-    (-webkit-min-device-pixel-ration: 2) and (min-width: 48em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em),
     (min-width: 125em) {
     background-image:
       linear-gradient(
@@ -40,6 +40,7 @@
 
   @include media(md) {
     clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
   }
 
   &__welcome {

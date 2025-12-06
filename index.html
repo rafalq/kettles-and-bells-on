@@ -52,6 +52,18 @@
       content="https://kettlesandbellson.ie/assets/images/og-image.jpg"
     />
 
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      href="./assets/images/logo-2x.webp"
+      as="image"
+      type="image/webp"
+    />
+
     <!-- Preload critical CSS -->
     <link rel="preload" href="css/style.css" as="style" />
 
@@ -64,7 +76,8 @@
 
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      crossorigin
     />
 
     <link rel="stylesheet" href="css/bootstrap-grid.css" />
@@ -121,7 +134,7 @@
           }
         ],
         "priceRange": "€€",
-        "image": "https://kettlesandbellson.ie/assets/images/logo.png"
+        "image": "https://kettlesandbellson.ie/assets/images/logo.webp"
       }
     </script>
   </head>
@@ -153,7 +166,7 @@
 
     <header class="header">
       <div class="header__logo-box">
-        <img src="assets/images/logo.png" alt="Logo" class="header__logo" />
+        <img src="assets/images/logo.webp" alt="Logo" class="header__logo" />
       </div>
       <div class="header__heading-box">
         <h1 class="heading-primary py-3 px-2">
@@ -507,7 +520,9 @@
             media="(max-width: 48em)"
           />
           <img
-            src="./assets/images/logo.png"
+            width="225"
+            height="143"
+            src="./assets/images/logo.webp"
             srcset="
               ./assets/images/logo-1x.webp 1x,
               ./assets/images/logo-2x.webp 2x,
@@ -560,12 +575,12 @@
           <img
             loading="lazy"
             src="./assets/images/popup-1.jpg"
-            alt="Two kettlebells"
+            alt="Kettlebells on the ground in a gym"
             class="popup__img"
           /><img
             loading="lazy"
             src="./assets/images/popup-4.jpg"
-            alt="An oldman with a kettlebell"
+            alt="Kettlebell, medicine ball and battle rope on a wooden box"
             class="popup__img"
           />
         </div>

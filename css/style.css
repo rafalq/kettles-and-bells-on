@@ -130,6 +130,8 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scrollbar-width: thin;
+  scrollbar-color: #6e9ab3 #f1f1f1;
 }
 
 html {
@@ -212,14 +214,14 @@ body {
   .heading-primary--main {
     font-size: 4.5rem;
     letter-spacing: 0.8rem;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 @media (max-width: 26.5em) {
   .heading-primary--main {
     font-size: 2.8rem;
     letter-spacing: 0.3rem;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 .heading-primary--sub {
@@ -239,7 +241,7 @@ body {
 @media (max-width: 36em) {
   .heading-primary--sub {
     font-size: 1.5rem;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -1310,6 +1312,7 @@ body {
   height: 23rem;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .card__picture--1 {
   background-image: linear-gradient(to right bottom, #6e9ab3, #2f4f4f), url(../assets/images/sfg.jpg);
@@ -1397,6 +1400,7 @@ body {
   .card__side--back {
     transform: rotateY(0);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   }
   .card:hover .card__side--front {
     transform: rotateY(0);
@@ -1605,7 +1609,16 @@ body {
   border-bottom: 0.45rem solid #3c9a5f;
   box-shadow: 0 1rem 2rem rgba(60, 154, 95, 0.2);
 }
+.form__input::placeholder {
+  color: #aeaeae;
+}
 .form__input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.form__input::-moz-placeholder {
+  color: #aeaeae;
+}
+.form__input:-ms-input-placeholder {
   color: #aeaeae;
 }
 .form__input:placeholder-shown + .form__label {
@@ -1966,7 +1979,9 @@ body {
   background-color: #6e9ab3;
   float: left;
   shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
   position: relative;
   transform: translateX(-3rem);
 }
@@ -1974,6 +1989,7 @@ body {
   .story__shape {
     float: none;
     shape-outside: none;
+    -webkit-shape-outsie: none;
     transform: none;
     margin-bottom: 2rem;
     width: 18rem;
@@ -2530,7 +2546,7 @@ body {
     height: 95vh;
   }
 }
-@media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ration: 2) and (min-width: 48em), (min-width: 125em) {
+@media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-width: 125em) {
   .header {
     background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero.avif);
   }
@@ -2538,6 +2554,7 @@ body {
 @media (max-width: 62em) {
   .header {
     clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
   }
 }
 .header__welcome {
@@ -2817,7 +2834,7 @@ body {
 }
 @media (max-width: 48em) {
   .section-stories {
-    padding: 20rem 5rem;
+    padding: 5rem 5rem;
     margin-top: -10vh;
   }
 }
@@ -2917,7 +2934,16 @@ body {
 .courses-page__input:focus:valid {
   border-bottom: 0.45rem solid #3c9a5f;
 }
+.courses-page__input::placeholder {
+  color: #aeaeae;
+}
 .courses-page__input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.courses-page__input::-moz-placeholder {
+  color: #aeaeae;
+}
+.courses-page__input:-ms-input-placeholder {
   color: #aeaeae;
 }
 .courses-page__input:placeholder-shown + .courses-page__label {
@@ -3115,40 +3141,47 @@ body {
   }
 }
 
-.form--auth {
+.form--auth,
+.form--contact {
   width: 50%;
   padding: 4rem 6rem;
 }
 @media (min-width: 87.56em) {
-  .form--auth {
+  .form--auth,
+  .form--contact {
     width: 45%;
   }
 }
 @media (max-width: 87.5em) {
-  .form--auth {
+  .form--auth,
+  .form--contact {
     width: 55%;
   }
 }
 @media (max-width: 75em) {
-  .form--auth {
+  .form--auth,
+  .form--contact {
     margin: 0 auto;
     width: 75%;
   }
 }
 @media (max-width: 62em) {
-  .form--auth {
+  .form--auth,
+  .form--contact {
     width: 85%;
     margin: 0 auto;
   }
 }
 @media (max-width: 48em) {
-  .form--auth {
+  .form--auth,
+  .form--contact {
     width: 100%;
     padding: 4rem 8rem;
   }
 }
 @media (max-width: 36em) {
-  .form--auth {
+  .form--auth,
+  .form--contact {
     padding: 2.5rem;
   }
 }

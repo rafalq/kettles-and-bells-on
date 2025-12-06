@@ -101,7 +101,7 @@
   }
 
   @include media(sm) {
-    @include section-base($padding-x: 5rem);
+    @include section-base($padding-y: 5rem, $padding-x: 5rem);
   }
 }
 

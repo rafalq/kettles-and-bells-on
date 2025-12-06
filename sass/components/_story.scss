@@ -38,13 +38,16 @@
     background-color: $color-primary-light;
     float: left;
     shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
     position: relative;
     transform: translateX(-3rem);
 
     @include media(xs) {
       float: none;
       shape-outside: none;
+      -webkit-shape-outsie: none;
       transform: none;
       margin-bottom: 2rem;
       width: 18rem;

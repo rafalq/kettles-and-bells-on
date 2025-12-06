@@ -46,7 +46,19 @@
       border-bottom: 0.45rem solid $color-success;
     }
 
+    &::placeholder {
+      color: $color-gray-300;
+    }
+
     &::-webkit-input-placeholder {
+      color: $color-gray-300;
+    }
+
+    &::-moz-placeholder {
+      color: $color-gray-300;
+    }
+
+    &:-ms-input-placeholder {
       color: $color-gray-300;
     }
   }

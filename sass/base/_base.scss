@@ -6,8 +6,8 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  // TODO FOR DEBUGGING PURPOSES, -- DELETE -- IF NOT NEEDED
-  // outline: 1px solid red !important;
+  scrollbar-width: thin;
+  scrollbar-color: #6e9ab3 #f1f1f1;
 }
 
 html {
