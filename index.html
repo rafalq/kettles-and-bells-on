@@ -57,41 +57,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Preload critical resources -->
     <link
       rel="preload"
       href="./assets/images/logo-2x.webp"
       as="image"
       type="image/webp"
     />
-
-    <!-- Preload critical CSS -->
     <link rel="preload" href="css/style.css" as="style" />
 
-    <!-- Preload fonts -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      as="style"
-    />
-
+    <!-- Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
-      crossorigin
     />
 
-    <link rel="stylesheet" href="css/bootstrap-grid.css" />
-    <link rel="stylesheet" href="css/bootstrap-carousel.css" />
-
+    <!-- Local CSS -->
+    <link
+      rel="stylesheet"
+      href="css/bootstrap-grid.css"
+      media="print"
+      onload=" this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap-carousel.css"
+      media="print"
+      onload="this.media='all'"
+    />
     <link rel="stylesheet" href="css/icon-font.css" />
-
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="48x48"
       href="assets/images/favicon-48x48.png"
+    />
+
+    <link
+      rel="preload"
+      href="./assets/images/header-bg.jpg"
+      as="image"
+      fetchpriority="high"
     />
 
     <title>Kettles & Bells On</title>
