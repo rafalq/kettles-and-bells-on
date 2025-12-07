@@ -54,6 +54,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="./assets/images/hero-about.webp"
+      as="image"
+      fetchpriority="high"
+    />
     <link
       rel="preload"
       href="./assets/images/logo-2x.webp"
@@ -61,23 +68,41 @@
       type="image/webp"
     />
 
-    <!-- Google Fonts -->
+    <link rel="preload" href="css/style.css" as="style" />
+
+    <!-- Google Fonts - async load -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+    /></noscript>
+
+    <!-- Critical CSS - load immediately -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Non-critical CSS - defer -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      href="css/bootstrap.min.css"
+      media="print"
+      onload="this.media='all'"
     />
-
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
-      crossorigin
+      href="css/icon-font.css"
+      media="print"
+      onload="this.media='all'"
     />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <link rel="stylesheet" href="css/icon-font.css" />
 
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -171,9 +196,7 @@
 
       <section class="about-page__section-mission">
         <div class="text-center mb-4xl">
-          <h2 class="heading-secondary--accent mb-2xl">
-            Our Mission & Values
-          </h2>
+          <h2 class="heading-secondary--accent mb-2xl">Our Mission & Values</h2>
         </div>
         <div class="row gx-5 gy-5 gy-lg-0">
           <div class="col-12 col-lg-4">

@@ -3,6 +3,7 @@
 .about-page {
   min-height: 100vh;
   padding-top: 8rem;
+  color: $color-primary;
 
   @include media(md) {
     padding-top: 6rem;
@@ -46,7 +47,7 @@
         rgba($color-primary-light, 0.3),
         rgba($color-primary-dark, 0.5)
       ),
-      url(../assets/images/our-story-about.jpg);
+      url(../assets/images/our-story-about.webp);
     background-size: cover;
     background-position: center;
     border-radius: 0.3rem;
@@ -145,7 +146,7 @@
           rgba($color-accent, 0.2),
           rgba($color-primary-dark, 0.4)
         ),
-        url(../assets/images/marcus.jpg);
+        url(../assets/images/marcus.webp);
     }
 
     &--2 {
@@ -155,7 +156,7 @@
           rgba($color-accent, 0.2),
           rgba($color-primary-dark, 0.4)
         ),
-        url(../assets/images/ana.jpg);
+        url(../assets/images/ana.webp);
     }
 
     &--3 {
@@ -165,7 +166,7 @@
           rgba($color-accent, 0.2),
           rgba($color-primary-dark, 0.4)
         ),
-        url(../assets/images/james.jpg);
+        url(../assets/images/james.webp);
     }
 
     @include media(sm) {

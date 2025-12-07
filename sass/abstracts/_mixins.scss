@@ -132,7 +132,7 @@
       rgba(10, 13, 16, $overlay-opacity),
       rgba(19, 24, 28, $overlay-opacity)
     ),
-    url(../assets/images/hero-#{$image-name}.jpg);
+    url(../assets/images/hero-#{$image-name}.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -149,7 +149,7 @@
         rgba(10, 13, 16, $overlay-opacity-hidpi),
         rgba(19, 24, 28, $overlay-opacity-hidpi)
       ),
-      url(../assets/images/hero-#{$image-name}.jpg);
+      url(../assets/images/hero-#{$image-name}.webp);
   }
 
   @include media(xl) {

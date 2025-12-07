@@ -1439,6 +1439,7 @@ body {
 }
 .composition__photo {
   width: 85%;
+  height: auto;
   box-shadow: 0 1rem 2rem -0.4rem rgba(0, 0, 0, 0.25);
   position: absolute;
   z-index: 10;
@@ -1448,6 +1449,7 @@ body {
 @media (min-width: 87.56em) {
   .composition__photo {
     width: 33.333333%;
+    height: auto;
     float: left;
     position: relative;
     box-shadow: 0 0.5rem 1rem -0.2rem rgba(0, 0, 0, 0.25);
@@ -1456,6 +1458,7 @@ body {
 @media (max-width: 48em) {
   .composition__photo {
     width: 33.333333%;
+    height: auto;
     float: left;
     position: relative;
     box-shadow: 0 0.5rem 1rem -0.2rem rgba(0, 0, 0, 0.25);
@@ -1946,7 +1949,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 1rem 2rem -0.4rem rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #4a708b;
   border-radius: 0.3rem;
   padding: 6rem;
   padding-left: 9rem;
@@ -1974,6 +1978,9 @@ body {
     flex-direction: column;
     align-items: center;
   }
+}
+.story .heading-tertiary {
+  color: #4a708b;
 }
 .story__shape {
   width: 15rem;
@@ -2615,6 +2622,7 @@ body {
 }
 .header__logo {
   height: 9.5rem;
+  width: auto;
 }
 @media (max-width: 62em) {
   .header__logo {
@@ -2862,7 +2870,7 @@ body {
 .courses-page .hero-courses {
   padding: 8rem;
   height: 65vh;
-  background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.75), rgba(19, 24, 28, 0.75)), url(../assets/images/hero-courses.jpg);
+  background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.75), rgba(19, 24, 28, 0.75)), url(../assets/images/hero-courses.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -2871,7 +2879,7 @@ body {
 }
 @media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-width: 125em) {
   .courses-page .hero-courses {
-    background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-courses.jpg);
+    background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-courses.webp);
   }
 }
 @media (max-width: 87.5em) {
@@ -3232,6 +3240,7 @@ body {
 .about-page {
   min-height: 100vh;
   padding-top: 8rem;
+  color: #4a708b;
 }
 @media (max-width: 62em) {
   .about-page {
@@ -3241,7 +3250,7 @@ body {
 .about-page .hero-about {
   padding: 8rem;
   height: 65vh;
-  background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.75), rgba(19, 24, 28, 0.75)), url(../assets/images/hero-about.jpg);
+  background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.75), rgba(19, 24, 28, 0.75)), url(../assets/images/hero-about.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -3250,7 +3259,7 @@ body {
 }
 @media (min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-width: 125em) {
   .about-page .hero-about {
-    background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-about.jpg);
+    background-image: linear-gradient(to right bottom, rgba(10, 13, 16, 0.85), rgba(19, 24, 28, 0.85)), url(../assets/images/hero-about.webp);
   }
 }
 @media (max-width: 87.5em) {
@@ -3312,7 +3321,7 @@ body {
 }
 .about-page__story-image {
   height: 50rem;
-  background-image: linear-gradient(to right bottom, rgba(110, 154, 179, 0.3), rgba(47, 79, 79, 0.5)), url(../assets/images/our-story-about.jpg);
+  background-image: linear-gradient(to right bottom, rgba(110, 154, 179, 0.3), rgba(47, 79, 79, 0.5)), url(../assets/images/our-story-about.webp);
   background-size: cover;
   background-position: center;
   border-radius: 0.3rem;
@@ -3401,13 +3410,13 @@ body {
   background-position: top;
 }
 .about-page__team-image--1 {
-  background-image: linear-gradient(to bottom, rgba(193, 166, 97, 0.2), rgba(47, 79, 79, 0.4)), url(../assets/images/marcus.jpg);
+  background-image: linear-gradient(to bottom, rgba(193, 166, 97, 0.2), rgba(47, 79, 79, 0.4)), url(../assets/images/marcus.webp);
 }
 .about-page__team-image--2 {
-  background-image: linear-gradient(to bottom, rgba(193, 166, 97, 0.2), rgba(47, 79, 79, 0.4)), url(../assets/images/ana.jpg);
+  background-image: linear-gradient(to bottom, rgba(193, 166, 97, 0.2), rgba(47, 79, 79, 0.4)), url(../assets/images/ana.webp);
 }
 .about-page__team-image--3 {
-  background-image: linear-gradient(to bottom, rgba(193, 166, 97, 0.2), rgba(47, 79, 79, 0.4)), url(../assets/images/james.jpg);
+  background-image: linear-gradient(to bottom, rgba(193, 166, 97, 0.2), rgba(47, 79, 79, 0.4)), url(../assets/images/james.webp);
 }
 @media (max-width: 48em) {
   .about-page__team-image {

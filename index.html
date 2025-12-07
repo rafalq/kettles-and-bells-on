@@ -58,6 +58,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Preload critical resources -->
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="./assets/images/hero-small.avif"
+      as="image"
+      type="image/avif"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="./assets/images/hero.avif"
+      as="image"
+      type="image/avif"
+      fetchpriority="high"
+      media="(min-resolution: 192dpi) and (min-width: 48em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-width: 125em)"
+    />
     <link
       rel="preload"
       href="./assets/images/logo-2x.webp"
@@ -66,26 +82,33 @@
     />
     <link rel="preload" href="css/style.css" as="style" />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - async load -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+    /></noscript>
 
     <!-- Local CSS -->
     <link
       rel="stylesheet"
       href="css/bootstrap-grid.css"
       media="print"
-      onload=" this.media='all'"
+      onload="this.media='all'"
     />
     <link
       rel="stylesheet"
-      href="css/bootstrap-carousel.css"
+      href="css/icon-font.css"
       media="print"
       onload="this.media='all'"
     />
-    <link rel="stylesheet" href="css/icon-font.css" />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Favicon -->
@@ -95,15 +118,6 @@
       sizes="48x48"
       href="assets/images/favicon-48x48.png"
     />
-
-    <link
-      rel="preload"
-      href="./assets/images/hero.avif"
-      as="image"
-      fetchpriority="high"
-    />
-
-    <title>Kettles & Bells On</title>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -143,7 +157,7 @@
           }
         ],
         "priceRange": "€€",
-        "image": "https://kettlesandbellson.ie/assets/images/logo.webp"
+        "image": "https://kettlesandbellson.ie/assets/images/logo-2x.webp"
       }
     </script>
   </head>
@@ -197,6 +211,7 @@
             Strength, mobility, endurance – all in
             <span class="swing-element">
               <object
+                aria-label="Kettlebell icon"
                 data="./assets/svg/kettlebell.svg"
                 width="32"
                 height="32"
@@ -242,6 +257,8 @@
                 sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
                 alt="Man is doing pushups with kettlebells"
                 class="composition__photo composition__photo--p1"
+                width="800"
+                height="533"
               />
 
               <img
@@ -254,6 +271,8 @@
                 sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
                 alt="Man is doing kettlebell swing"
                 class="composition__photo composition__photo--p2"
+                width="800"
+                height="600"
               />
 
               <img
@@ -266,6 +285,8 @@
                 sizes="(max-width: 48em) 35vw, (max-width: 26em) 26vw, 22em"
                 alt="Woman with kettlebell"
                 class="composition__photo composition__photo--p3"
+                width="798"
+                height="532"
               />
             </div>
           </div>
@@ -344,11 +365,11 @@
             >
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--1">&nbsp;</div>
-                <h4 class="card__heading">
+                <h3 class="card__heading">
                   <span class="card__heading-span card__heading-span--1">
                     SFG Preparation
                   </span>
-                </h4>
+                </h3>
                 <div class="card__details">
                   <ul>
                     <li>4 week course</li>
@@ -375,11 +396,11 @@
             >
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--2">&nbsp;</div>
-                <h4 class="card__heading">
+                <h3 class="card__heading">
                   <span class="card__heading-span card__heading-span--2">
                     Senior Program
                   </span>
-                </h4>
+                </h3>
                 <div class="card__details">
                   <ul>
                     <li>8 week course</li>
@@ -408,11 +429,11 @@
             >
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--3">&nbsp;</div>
-                <h4 class="card__heading">
+                <h3 class="card__heading">
                   <span class="card__heading-span card__heading-span--3">
                     Warrior Kettlebell
                   </span>
-                </h4>
+                </h3>
                 <div class="card__details">
                   <ul>
                     <li>8 week combat-strength fusion</li>
@@ -607,9 +628,6 @@
       </div>
     </div>
 
-    <!-- bootstrap js -->
-    <script src="./js/vendor/bootstrap.bundle.min.js"></script>
-    <!-- custom js -->
     <script src="./js/utils/toast.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/pages/courses/booking.js"></script>

@@ -16,14 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
       successMessageType: "toast",
       successMessage: "Message sent successfully! We'll get back to you soon.",
 
-      onSubmit: (data) => {
-        console.log("📤 Sending contact message:", data);
-      },
-      onSuccess: (data) => {
-        console.log("✅ Message sent:", data);
-      },
-      onError: (data) => {
-        console.log("❌ Validation failed:", data);
+      onError: () => {
+        console.error("❌ Validation failed:");
       },
     });
 

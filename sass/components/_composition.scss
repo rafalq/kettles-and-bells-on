@@ -7,6 +7,7 @@
 
   &__photo {
     width: 85%;
+    height: auto;
     box-shadow: $shadow-lg;
     position: absolute;
     z-index: 10;
@@ -15,6 +16,7 @@
 
     @include media(xxl) {
       width: 33.333333%;
+      height: auto;
       float: left;
       position: relative;
       box-shadow: $shadow-md;
@@ -22,6 +24,7 @@
 
     @include media(sm) {
       width: 33.333333%;
+      height: auto;
       float: left;
       position: relative;
       box-shadow: $shadow-md;

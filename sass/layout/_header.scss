@@ -98,6 +98,7 @@
 
   &__logo {
     height: 9.5rem;
+    width: auto;
 
     @include media(md) {
       height: 7.5rem;

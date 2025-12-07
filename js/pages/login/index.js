@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showSuccessMessage: false,
 
     onSubmit: (data) => {
-      console.log("📤 Submitting login:", data);
-
       // Validate credentials
       const result = auth.validateLogin(data.email, data.password);
 
@@ -40,8 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     },
     onSuccess: (data) => {
-      console.log("✅ Login successful:", data);
-
       window.ToastSystem.success("Logged in successfully!");
 
       // Save logged in state
@@ -63,6 +59,4 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("❌ Validation failed:", data);
     },
   });
-
-  console.log("Login form ready!");
 });
