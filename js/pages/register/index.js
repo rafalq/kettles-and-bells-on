@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // User already exists - show error toast
         window.ToastSystem.error(result.message, { duration: 4000 });
 
-        // uncomment to redirect to login after 2 seconds
-        // setTimeout(() => {
-        //   window.location.href = "./login.html";
-        // }, 2000);
+        // redirect to login after 2 seconds
+        setTimeout(() => {
+          window.location.href = "./login.html";
+        }, 2000);
 
         return false; // Stop form submission
       }
