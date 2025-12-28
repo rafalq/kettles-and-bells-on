@@ -70,8 +70,8 @@ export class Form {
       // Position relative for parent
       input.parentElement.style.position = "relative";
 
-      // Insert after input
-      input.after(toggleBtn);
+      // Insert BEFORE input, otherwise it breaks label-placeholder animation
+      input.before(toggleBtn);
 
       // Toggle handler
       toggleBtn.addEventListener("click", () => {
@@ -110,17 +110,6 @@ export class Form {
     this.inputs.forEach((input) => {
       input.addEventListener("blur", () => this.validateField(input));
       input.addEventListener("input", () => this.clearError(input));
-
-      //  input.addEventListener("input", () => {
-      //   this.clearError(input);
-      //   // Validate on input if field was previously touched
-      //   if (
-      //     input.classList.contains("form__input--invalid") ||
-      //     input.classList.contains("form__input--valid")
-      //   ) {
-      //     this.validateField(input);
-      //   }
-      // });
     });
 
     // Initialize form data from localStorage if available

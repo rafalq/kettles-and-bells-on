@@ -1623,20 +1623,6 @@ body {
 .form__input:-ms-input-placeholder {
   color: #aeaeae;
 }
-.form__input:placeholder-shown + .form__label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(4rem);
-}
-.form__label {
-  color: #dadada;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-left: 1rem;
-  margin-top: 0.4rem;
-  display: block;
-  transition: all 0.3s;
-}
 .form__textarea {
   color: #3e3e3e;
   font-size: 1.5rem;
@@ -1680,7 +1666,7 @@ body {
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(4rem);
+  transform: translateY(-4rem);
 }
 .form__label {
   color: #dadada;
@@ -2955,20 +2941,6 @@ body {
 }
 .courses-page__input:-ms-input-placeholder {
   color: #aeaeae;
-}
-.courses-page__input:placeholder-shown + .courses-page__label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem);
-}
-.courses-page__label {
-  color: #dadada;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-left: 1rem;
-  margin-top: 0.4rem;
-  display: block;
-  transition: all 0.3s;
 }
 .courses-page__section-courses {
   padding: 20rem 5rem;

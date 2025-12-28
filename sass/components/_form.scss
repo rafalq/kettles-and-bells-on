@@ -68,22 +68,6 @@
     }
   }
 
-  &__input:placeholder-shown + &__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(4rem);
-  }
-
-  &__label {
-    color: $color-gray-200;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 1rem;
-    margin-top: 0.4rem;
-    display: block;
-    transition: all 0.3s;
-  }
-
   &__textarea {
     color: $color-gray-700;
     font-size: 1.5rem;
@@ -136,7 +120,7 @@
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(4rem);
+    transform: translateY(-4rem);
   }
 
   &__label {
@@ -225,7 +209,7 @@
     transition: all 0.2s;
 
     &::after {
-      content: "✓"; // ← PTASZEK
+      content: "✓";
       position: absolute;
       top: 50%;
       left: 50%;
